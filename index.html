@@ -158,7 +158,6 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
     <li><a href="#" onclick='go("tech")' id="nv-tech">Tech</a></li>
     <li><a href="#" onclick='go("gallery")' id="nv-gallery">Gallery</a></li>
     <li><a href="#" onclick='go("frp-rods")' id="nv-frp-rods">FRP Rods</a></li>
-    <li><a href="#" onclick='go("global-export")' id="nv-global-export">Global Export</a></li>
   </ul>
 </div>
 </nav>
@@ -188,7 +187,6 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 <div class="card" onclick='go("gallery")'><div class="card-img" style="background-image:url(images/export-turkey-pallet.png)"></div><div class="card-body"><h3>Factory Gallery</h3><p>Real photos — production lines, packaging, loading, export to Turkey, Russia & more.</p><span class="more"><span data-i18n="card-gallery-more">View Gallery</span> →</span></div></div>
 <div class="card" onclick='go("contact")'><div class="card-img" style="background-image:url(images/contact-office-building.png)"></div><div class="card-body"><h3>Contact Us</h3><p>Email, WhatsApp, Alibaba Store. Reply within 24 hours. Free samples available.</p><span class="more"><span data-i18n="card-contact-more">Get in Touch</span> →</span></div></div>
 <div class="card" onclick='go("factory-strength")'><div class="card-img" style="background-image:url(images/factory-strength-russian-client.png)"></div><div class="card-body"><h3>Factory Strength</h3><p>16,000 sqm facility, automated production lines, R&D lab, strict QC — Jinjiu's manufacturing power.</p><span class="more"><span data-i18n="card-factory-more">Explore Factory</span> →</span></div></div>
-<div class="card" onclick='go("global-export")'><div class="card-img" style="background-image:url(images/export-turkey-loading.png)"></div><div class="card-body"><h3>Global Export</h3><p>Exporting to Russia, Turkey, Indonesia, South Africa, Chile, Vietnam & more. 30+ countries served.</p><span class="more"><span data-i18n="card-export-more">View Export Map</span> →</span></div></div>
 </div>
 </div>
 
@@ -673,7 +671,7 @@ function go(name){
   for(var i=0;i<links.length;i++)links[i].classList.remove("active");
   var nav=document.getElementById("nv-"+name);
   if(nav)nav.classList.add("active");
-  var titles={home:"Jinjiu Anchor Resin | Professional Resin Anchor Capsule Manufacturer",about:"About Jinjiu | Resin Anchor Manufacturer Since 2004",products:"Products | Resin Anchor Capsule & FRP Rod Manufacturer",gallery:"Factory Gallery | Jinjiu Anchor Resin",tech:"Technical Documents | Jinjiu Anchor Resin",certs:"Certificates & Quality | Jinjiu Anchor Resin",order:"How to Order | Jinjiu Anchor Resin",contact:"Contact Us | Jinjiu Anchor Resin","frp-rods":"FRP Anchor Rods | Jinjiu Anchor Resin","factory-strength":"Factory Strength | Jinjiu Anchor Resin","global-export":"Global Export | Jinjiu Anchor Resin","prod-resin-capsule":"Resin Anchor Capsule - Full Specs | Jinjiu","prod-epoxy":"Epoxy Adhesive - Full Specs | Jinjiu","prod-mg-resin":"MG Resin - Full Specs | Jinjiu","prod-frp-rod":"FRP Anchor Rod System - Full Specs | Jinjiu"};
+  var titles={home:"Jinjiu Anchor Resin | Professional Resin Anchor Capsule Manufacturer",about:"About Jinjiu | Resin Anchor Manufacturer Since 2004",products:"Products | Resin Anchor Capsule & FRP Rod Manufacturer",gallery:"Factory Gallery | Jinjiu Anchor Resin",tech:"Technical Documents | Jinjiu Anchor Resin",certs:"Certificates & Quality | Jinjiu Anchor Resin",order:"How to Order | Jinjiu Anchor Resin",contact:"Contact Us | Jinjiu Anchor Resin","frp-rods":"FRP Anchor Rods | Jinjiu Anchor Resin","factory-strength":"Factory Strength | Jinjiu Anchor Resin","prod-resin-capsule":"Resin Anchor Capsule - Full Specs | Jinjiu","prod-epoxy":"Epoxy Adhesive - Full Specs | Jinjiu","prod-mg-resin":"MG Resin - Full Specs | Jinjiu","prod-frp-rod":"FRP Anchor Rod System - Full Specs | Jinjiu"};
   if(titles[name])document.title=titles[name];
   window.scrollTo(0,0);
   applyLang(currentLang);
