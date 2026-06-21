@@ -156,6 +156,8 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
     <li><a href="#" onclick='go("certs")' id="nv-certs">Certificates</a></li>
     <li><a href="#" onclick='go("order")' id="nv-order">Order</a></li>
     <li><a href="#" onclick='go("contact")' id="nv-contact">Contact</a></li>
+    <li><a href="#" onclick='go("factory-strength")' id="nv-factory-strength">Factory Strength</a></li>
+    <li><a href="#" onclick='go("global-export")' id="nv-global-export">Global Export</a></li>
   </ul>
 </div>
 </nav>
@@ -183,6 +185,8 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 <div class="card" onclick='go("certs")'><div class="card-img" style="background-image:url(images/certs/patent-certificate.jpg)"></div><div class="card-body"><h3>Certificates</h3><p>Patent, test reports, quality warranty, ISO 9001/14001/45001, MA Safety certifications.</p><span class="more"><span data-i18n="card-certs-more">View Certificates</span> →</span></div></div>
 <div class="card" onclick='go("order")'><div class="card-img" style="background-image:url(images/factory-loading-truck.png)"></div><div class="card-body"><h3>How to Order</h3><p>8-step process: inquiry → quote → sample → production → inspection → shipment.</p><span class="more"><span data-i18n="card-order-more">View Process</span> →</span></div></div>
 <div class="card" onclick='go("contact")'><div class="card-img" style="background-image:url(images/frp-anchor-rod.png)"></div><div class="card-body"><h3>Contact Us</h3><p>Email, WhatsApp, Alibaba Store. Reply within 24 hours. Free samples available.</p><span class="more"><span data-i18n="card-contact-more">Get in Touch</span> →</span></div></div>
+<div class="card" onclick='go("factory-strength")'><div class="card-img" style="background-image:url(images/equipment-tech-transfer.png)"></div><div class="card-body"><h3>Factory Strength</h3><p>16,000 sqm facility, automated production lines, R&D lab, strict QC — Jinjiu's manufacturing power.</p><span class="more"><span data-i18n="card-factory-more">Explore Factory</span> →</span></div></div>
+<div class="card" onclick='go("global-export")'><div class="card-img" style="background-image:url(images/export-turkey-loading.png)"></div><div class="card-body"><h3>Global Export</h3><p>Exporting to Russia, Turkey, Indonesia, South Africa, Chile, Vietnam & more. 30+ countries served.</p><span class="more"><span data-i18n="card-export-more">View Export Map</span> →</span></div></div>
 </div>
 </div>
 
@@ -471,7 +475,68 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 </div>
 </div>
 
+
+<!-- FACTORY STRENGTH -->
+<div class="page" id="pg-factory-strength">
+<a class="btn-back" onclick='go("home")'>← Back to Home</a>
+<h2 data-i18n="factory-title">Factory Strength</h2>
+<p style="color:#5a5a7a;font-size:.85rem;margin-bottom:14px" data-i18n="factory-sub">Advanced manufacturing base with 3 automated production lines, 16,000 sqm workshop, and rigorous quality control.</p>
+<div class="row2">
+<div><img src="images/factory-warehouse-products.png" style="border-radius:8px;width:100%" alt="Factory warehouse with products"></div>
+<div><img src="images/equipment-tech-transfer.png" style="border-radius:8px;width:100%" alt="Equipment and tech transfer"></div>
+</div>
+<h3 data-i18n="factory-capacity-title">Production Lines</h3>
+<table class="tbl">
+<tr><td>Resin Anchor Capsules</td><td>12,000,000 pcs / year</td></tr>
+<tr><td>MG Resin (Unsaturated Polyester)</td><td>5,000 tons / year</td></tr>
+<tr><td>Epoxy Anchoring Adhesive</td><td>1,000 tons / year</td></tr>
+<tr><td>FRP Anchor Rods</td><td>500,000 sets / year</td></tr>
+<tr><td>Packaging Bags</td><td>300 tons / year</td></tr>
+<tr><td>Total Factory Area</td><td>16,000+ sqm</td></tr>
+</table>
+<h3 data-i18n="factory-rd-title">R&amp;D &amp; Quality Control</h3>
+<p style="font-size:.85rem;color:#5a5a7a;margin-bottom:14px" data-i18n="factory-rd-desc">Dedicated R&amp;D team with advanced testing equipment ensures every batch meets international standards before shipment.</p>
+<div class="badges">
+<span>ISO 9001:2015</span><span>ISO 14001:2015</span><span>ISO 45001:2018</span><span>MA Safety</span><span>SGS Tested</span>
+</div>
+<h3 data-i18n="factory-tour-title">Factory Facilities</h3>
+<div class="gal">
+<div class="gcard"><a href="images/factory-warehouse-ready.png" target="_blank" rel="noopener"><img src="images/factory-warehouse-ready.png" loading="lazy" alt="Factory warehouse"></a><span>Warehouse Overview</span></div>
+<div class="gcard"><a href="images/factory-warehouse-products.png" target="_blank" rel="noopener"><img src="images/factory-warehouse-products.png" loading="lazy" alt="Products in warehouse"></a><span>Products in Warehouse</span></div>
+<div class="gcard"><a href="images/equipment-tech-transfer.png" target="_blank" rel="noopener"><img src="images/equipment-tech-transfer.png" loading="lazy" alt="Equipment and tech"></a><span>Equipment &amp; Tech</span></div>
+<div class="gcard"><a href="images/factory-loading-truck.png" target="_blank" rel="noopener"><img src="images/factory-loading-truck.png" loading="lazy" alt="Loading truck"></a><span>Loading &amp; Shipping</span></div>
+</div>
+</div>
+
+<!-- GLOBAL EXPORT -->
+<div class="page" id="pg-global-export">
+<a class="btn-back" onclick='go("home")'>← Back to Home</a>
+<h2 data-i18n="export-title">Global Export</h2>
+<p style="color:#5a5a7a;font-size:.85rem;margin-bottom:14px" data-i18n="export-sub">Jinjiu products are exported to over 30 countries worldwide, trusted by mining and construction companies across continents.</p>
+<h3 data-i18n="export-map-title">Export Destinations</h3>
+<table class="tbl">
+<tr><td>🇷🇺 Russia</td><td>Resin capsules, FRP rods, epoxy — coal mines &amp; construction</td></tr>
+<tr><td>🇹🇷 Turkey</td><td>Resin capsules, FRP rods — mining &amp; tunneling</td></tr>
+<tr><td>🇮🇩 Indonesia</td><td>Resin capsules — coal mining support</td></tr>
+<tr><td>🇿🇦 South Africa</td><td>Resin capsules, MG resin — deep mining</td></tr>
+<tr><td>🇨🇱 Chile</td><td>FRP rods, epoxy — copper mining</td></tr>
+<tr><td>🇻🇳 Vietnam</td><td>Resin capsules, FRP rods — infrastructure</td></tr>
+<tr><td>🇵🇪 Peru</td><td>FRP anchor rods — mining support</td></tr>
+<tr><td>🇵🇱 Poland</td><td>Resin capsules — coal mining</td></tr>
+<tr><td>🇧🇷 Brazil</td><td>Resin capsules, epoxy — civil construction</td></tr>
+<tr><td>🇦🇺 Australia</td><td>FRP rods, epoxy — tunneling &amp; mining</td></tr>
+</table>
+<h3 data-i18n="export-gallery-title">Export Photos</h3>
+<div class="gal">
+<div class="gcard"><a href="images/export-turkey-loading.png" target="_blank" rel="noopener"><img src="images/export-turkey-loading.png" loading="lazy" alt="Export to Turkey loading"></a><span>Export to Turkey — Loading</span></div>
+<div class="gcard"><a href="images/export-turkey-pallet.png" target="_blank" rel="noopener"><img src="images/export-turkey-pallet.png" loading="lazy" alt="Export to Turkey pallet"></a><span>Export to Turkey — Pallet</span></div>
+<div class="gcard"><a href="images/anchor-2350-export-russia.png" target="_blank" rel="noopener"><img src="images/anchor-2350-export-russia.png" loading="lazy" alt="Anchor 2350 export to Russia"></a><span>Export to Russia — 2350</span></div>
+<div class="gcard"><a href="images/factory-loading-truck.png" target="_blank" rel="noopener"><img src="images/factory-loading-truck.png" loading="lazy" alt="Loading for export"></a><span>Loading for Export</span></div>
+</div>
+</div>
+
 <!-- CONTACT -->
+
 <div class="page" id="pg-contact">
 <a class="btn-back" onclick='go("home")'>← Back to Home</a>
 <h2 data-i18n="contact-title">Contact Us</h2>
@@ -538,7 +603,7 @@ function go(name){
   for(var i=0;i<links.length;i++)links[i].classList.remove("active");
   var nav=document.getElementById("nv-"+name);
   if(nav)nav.classList.add("active");
-  var titles={home:"Jinjiu Anchor Resin | Professional Resin Anchor Capsule Manufacturer",about:"About Jinjiu | Resin Anchor Manufacturer Since 2004",products:"Products | Resin Anchor Capsule & FRP Rod Manufacturer",gallery:"Factory Gallery | Jinjiu Anchor Resin",tech:"Technical Documents | Jinjiu Anchor Resin",certs:"Certificates & Quality | Jinjiu Anchor Resin",order:"How to Order | Jinjiu Anchor Resin",contact:"Contact Us | Jinjiu Anchor Resin","prod-resin-capsule":"Resin Anchor Capsule - Full Specs | Jinjiu","prod-epoxy":"Epoxy Adhesive - Full Specs | Jinjiu","prod-mg-resin":"MG Resin - Full Specs | Jinjiu","prod-frp-rod":"FRP Anchor Rod System - Full Specs | Jinjiu"};
+  var titles={home:"Jinjiu Anchor Resin | Professional Resin Anchor Capsule Manufacturer",about:"About Jinjiu | Resin Anchor Manufacturer Since 2004",products:"Products | Resin Anchor Capsule & FRP Rod Manufacturer",gallery:"Factory Gallery | Jinjiu Anchor Resin",tech:"Technical Documents | Jinjiu Anchor Resin",certs:"Certificates & Quality | Jinjiu Anchor Resin",order:"How to Order | Jinjiu Anchor Resin",contact:"Contact Us | Jinjiu Anchor Resin","factory-strength":"Factory Strength | Jinjiu Anchor Resin","global-export":"Global Export | Jinjiu Anchor Resin","prod-resin-capsule":"Resin Anchor Capsule - Full Specs | Jinjiu","prod-epoxy":"Epoxy Adhesive - Full Specs | Jinjiu","prod-mg-resin":"MG Resin - Full Specs | Jinjiu","prod-frp-rod":"FRP Anchor Rod System - Full Specs | Jinjiu"};
   if(titles[name])document.title=titles[name];
   window.scrollTo(0,0);
   applyLang(currentLang);
@@ -575,7 +640,21 @@ var LANG_DATA = {
   "nav-certs":{"en":"Certificates","zh":"资质证书"},
   "nav-order":{"en":"Order","zh":"订购流程"},
   "nav-contact":{"en":"Contact","zh":"联系我们"},
-  "nav-logo-text":{"en":"ANCHOR RESIN","zh":"锚固剂厂家"},
+  
+  "nav-factory-strength":{"en":"Factory Strength","zh":"厂家实力"},
+  "nav-global-export":{"en":"Global Export","zh":"全球出口"},
+  "card-factory-more":{"en":"Explore Factory","zh":"了解工厂"},
+  "card-export-more":{"en":"View Export Map","zh":"出口地图"},
+  "factory-title":{"en":"Factory Strength","zh":"厂家实力"},
+  "factory-sub":{"en":"Advanced manufacturing base with 3 automated production lines, 16,000 sqm workshop, and rigorous quality control.","zh":"拥有3条自动化生产线、16000㎡车间和严格质检的先进制造基地。"},
+  "factory-capacity-title":{"en":"Production Lines","zh":"生产线"},
+  "factory-rd-title":{"en":"R&D & Quality Control","zh":"研发与质检"},
+  "factory-rd-desc":{"en":"Dedicated R&D team with advanced testing equipment ensures every batch meets international standards before shipment.","zh":"专业研发团队+先进检测设备，确保每批产品出厂前符合国际标准。"},
+  "factory-tour-title":{"en":"Factory Facilities","zh":"厂区设施"},
+  "export-title":{"en":"Global Export","zh":"全球出口"},
+  "export-sub":{"en":"Jinjiu products are exported to over 30 countries worldwide, trusted by mining and construction companies across continents.","zh":"金久产品出口全球30多个国家，深受各大洲矿山和建筑企业信赖。"},
+  "export-map-title":{"en":"Export Destinations","zh":"出口目的地"},
+  "export-gallery-title":{"en":"Export Photos","zh":"出口实拍"},"nav-logo-text":{"en":"ANCHOR RESIN","zh":"锚固剂厂家"},
   "card-about-more":{"en":"Learn More","zh":"了解更多"},
   "card-products-more":{"en":"View Products","zh":"查看产品"},
   "card-gallery-more":{"en":"View Gallery","zh":"查看图册"},
@@ -601,7 +680,11 @@ var LANG_DATA = {
   "card-certs-desc":{"en":"Patent, reports, ISO 9001/14001/45001, MA.","zh":"专利·报告·ISO体系·煤安认证"},
   "card-order-title":{"en":"How to Order","zh":"订购流程"},
   "card-order-desc":{"en":"8-step: inquiry → quote → sample → shipment.","zh":"8步流程：询盘→报价→样品→发货"},
-  "card-contact-title":{"en":"Contact Us","zh":"联系我们"},
+  
+  "card-factory-title":{"en":"Factory Strength","zh":"厂家实力"},
+  "card-factory-desc":{"en":"16,000 sqm facility, automated lines, R&D, QC.","zh":"16000㎡·自动线·研发·质检"},
+  "card-export-title":{"en":"Global Export","zh":"全球出口"},
+  "card-export-desc":{"en":"Export to 30+ countries worldwide.","zh":"出口全球30+国家"},"card-contact-title":{"en":"Contact Us","zh":"联系我们"},
   "card-contact-desc":{"en":"Email, WhatsApp, Alibaba. 24h reply.","zh":"邮件·WhatsApp·阿里国际站·24h回复"},
   "back-home":{"en":"← Back to Home","zh":"← 返回首页"},
   "back-products":{"en":"← Back to Products","zh":"← 返回产品"},
