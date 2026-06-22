@@ -226,6 +226,7 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 </div>
 </div>
 <div style="text-align:center;background:#f0f4f8;padding:20px;border-radius:10px;margin-top:24px"><h3 style="font-size:.95rem;margin-bottom:8px;color:#0f1b2d">Lets work together</h3><p style="font-size:.82rem;color:#5a5a7a;margin-bottom:14px">Contact us for product recommendations and free samples.</p><div><a href="https://wa.me/8617729903561" target="_blank" rel="noopener" style="display:inline-block;background:#25d366;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700">Chat on WhatsApp</a><a href="mailto:57429760@qq.com" style="display:inline-block;background:#0056b3;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700;margin-left:10px">Send Email</a></div></div>
+</div>
 
 <!-- PRODUCTS -->
 <div class="page" id="pg-products">
@@ -255,6 +256,7 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 </div>
 </div>
 <div style="text-align:center;background:#f0f4f8;padding:20px;border-radius:10px;margin-top:20px"><h3 style="font-size:.95rem;margin-bottom:8px;color:#0f1b2d">Cant find what you need?</h3><p style="font-size:.82rem;color:#5a5a7a;margin-bottom:14px">Custom formulations and OEM service available. Talk to us.</p><div><a href="https://wa.me/8617729903561" target="_blank" rel="noopener" style="display:inline-block;background:#25d366;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700">Chat on WhatsApp</a><a href="mailto:57429760@qq.com" style="display:inline-block;background:#0056b3;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700;margin-left:10px">Send Email</a></div></div>
+</div>
 
 <!-- PRODUCT DETAIL: Resin Anchor Capsule -->
 <div class="page" id="pg-prod-resin-capsule">
@@ -417,6 +419,7 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 </div>
 <div style="text-align:center;background:#f0f4f8;padding:20px;border-radius:10px;margin-top:24px"><h3 style="font-size:.95rem;margin-bottom:8px;color:#0f1b2d">Interested in this product?</h3><p style="font-size:.82rem;color:#5a5a7a;margin-bottom:14px">Contact us for a quote, free samples, or technical details.</p><div><a href="https://wa.me/8617729903561" target="_blank" rel="noopener" style="display:inline-block;background:#25d366;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700">Chat on WhatsApp</a><a href="mailto:57429760@qq.com" style="display:inline-block;background:#0056b3;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700;margin-left:10px">Send Email</a></div></div>
 <div style="text-align:center;background:#f0f4f8;padding:20px;border-radius:10px;margin-top:24px"><h3 style="font-size:.95rem;margin-bottom:8px;color:#0f1b2d">Need more technical info?</h3><p style="font-size:.82rem;color:#5a5a7a;margin-bottom:14px">Our team can provide detailed specs and guidance.</p><div><a href="https://wa.me/8617729903561" target="_blank" rel="noopener" style="display:inline-block;background:#25d366;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700">Chat on WhatsApp</a><a href="mailto:57429760@qq.com" style="display:inline-block;background:#0056b3;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700;margin-left:10px">Send Email</a></div></div>
+</div>
 
 <!-- GALLERY -->
 <div class="page" id="pg-gallery">
@@ -718,21 +721,6 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 </p>
 <p class="visitor-counter">🌐 <span id="visit-label">Visitors:</span> <span id="visit-count">0</span></p>
 </footer>
-<style>
-.visitor-counter{margin-top:8px;font-size:.68rem;color:#aaa}
-.visitor-counter span{vertical-align:middle}
-</style>
-
-
-<div class="visitor-counter">
-  <span>🌐 Visitor: </span><span id="visit-count">--</span>
-</div>
-<style>
-.visitor-counter{display:inline-block;margin-top:8px;font-size:.68rem;color:#aaa}
-.visitor-counter span{vertical-align:middle}
-</style>
-
-
 <script>
 function go(name){
   if(name.indexOf("/")>=0)return;
@@ -765,8 +753,8 @@ window.addEventListener("DOMContentLoaded",function(){
   if(location.hash){
     var h=location.hash.replace("#","");
     if(h && document.getElementById("pg-"+h))go(h);
-  applyLang(currentLang);
   }
+  applyLang(currentLang);
 });
 
 
