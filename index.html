@@ -465,84 +465,185 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 <!-- CERTIFICATES -->
 <div class="page" id="pg-certs">
 <a class="btn-back" onclick='go("home")'>← Back to Home</a>
-<h2 data-i18n="certs-title">Certificates &amp; Quality Assurance</h2>
-<p style="color:#5a5a7a;font-size:.82rem;margin-bottom:18px">Click any certificate to view full size — all certifications are authentic and verifiable.</p>
+<h2 data-i18n="certs-title" style="font-size:1.3rem">Certificates &amp; Quality Assurance</h2>
+<p style="color:#5a5a7a;font-size:.82rem;margin-bottom:18px">Click any certificate image to view full size — all certifications are authentic and verifiable.</p>
 
-<!-- Badge Row: ISO + MA + SGS -->
-<div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:24px">
-  <div style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:16px 22px;text-align:center;flex:1;min-width:140px">
-    <div style="font-size:2.2rem;margin-bottom:4px">📋</div>
-    <div style="font-size:.85rem;font-weight:700;color:#0f1b2d">ISO 9001:2015</div>
-    <div style="font-size:.68rem;color:#5a5a7a">Quality Management</div>
-  </div>
-  <div style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:16px 22px;text-align:center;flex:1;min-width:140px">
-    <div style="font-size:2.2rem;margin-bottom:4px">🌿</div>
-    <div style="font-size:.85rem;font-weight:700;color:#0f1b2d">ISO 14001:2015</div>
-    <div style="font-size:.68rem;color:#5a5a7a">Environmental</div>
-  </div>
-  <div style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:16px 22px;text-align:center;flex:1;min-width:140px">
-    <div style="font-size:2.2rem;margin-bottom:4px">🛡️</div>
-    <div style="font-size:.85rem;font-weight:700;color:#0f1b2d">ISO 45001:2018</div>
-    <div style="font-size:.68rem;color:#5a5a7a">Occupational Health</div>
-  </div>
-  <div style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:16px 22px;text-align:center;flex:1;min-width:140px">
-    <div style="font-size:2.2rem;margin-bottom:4px">⛏️</div>
-    <div style="font-size:.85rem;font-weight:700;color:#0f1b2d">MA Safety</div>
-    <div style="font-size:.68rem;color:#5a5a7a">Coal Mine Approval</div>
-  </div>
-  <div style="background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:16px 22px;text-align:center;flex:1;min-width:140px">
-    <div style="font-size:2.2rem;margin-bottom:4px">🔬</div>
-    <div style="font-size:.85rem;font-weight:700;color:#0f1b2d">SGS Tested</div>
-    <div style="font-size:.68rem;color:#5a5a7a">Third-Party Inspection</div>
-  </div>
-</div>
-
-<!-- Certificate Images: 2-column grid -->
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
-  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.07);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/patent-certificate.jpg','_blank')">
-    <a href="images/certs/patent-certificate.jpg" target="_blank" rel="noopener" onclick="event.stopPropagation()"><img src="images/certs/patent-certificate.jpg" loading="lazy" alt="Invention Patent Certificate" style="width:100%;height:180px;object-fit:cover;display:block"></a>
-    <div style="padding:12px 14px">
-      <h4 style="font-size:.82rem;color:#0f1b2d;margin:0 0 2px">🏆 Invention Patent Certificate</h4>
-      <p style="font-size:.72rem;color:#5a5a7a;margin:0">Waterproof resin anchoring agent formulation. National IP Administration.</p>
+<!-- ISO Certifications Row -->
+<h3 style="font-size:1rem;margin:18px 0 12px;color:#0f1b2d">🏅 ISO Management System Certifications</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:22px">
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/ISO质量体系认证.png','_blank')">
+    <img src="images/certs/ISO质量体系认证.png" loading="lazy" alt="ISO 9001 Quality Management" style="width:100%;height:180px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">ISO 9001:2015</div>
+      <div style="font-size:.68rem;color:#5a5a7a">Quality Management System</div>
     </div>
   </div>
-  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.07);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/factory-test-report.png','_blank')">
-    <a href="images/certs/factory-test-report.png" target="_blank" rel="noopener" onclick="event.stopPropagation()"><img src="images/certs/factory-test-report.png" loading="lazy" alt="Factory Test Report" style="width:100%;height:180px;object-fit:cover;display:block"></a>
-    <div style="padding:12px 14px">
-      <h4 style="font-size:.82rem;color:#0f1b2d;margin:0 0 2px">📊 Factory Test Report</h4>
-      <p style="font-size:.72rem;color:#5a5a7a;margin:0">Gel time, compressive strength, pull-out force — tested per standard.</p>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/ISO环境体系认证.png','_blank')">
+    <img src="images/certs/ISO环境体系认证.png" loading="lazy" alt="ISO 14001 Environmental" style="width:100%;height:180px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">ISO 14001:2015</div>
+      <div style="font-size:.68rem;color:#5a5a7a">Environmental Management</div>
     </div>
   </div>
-  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.07);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/quality-warranty.jpg','_blank')">
-    <a href="images/certs/quality-warranty.jpg" target="_blank" rel="noopener" onclick="event.stopPropagation()"><img src="images/certs/quality-warranty.jpg" loading="lazy" alt="Quality Warranty" style="width:100%;height:180px;object-fit:cover;display:block"></a>
-    <div style="padding:12px 14px">
-      <h4 style="font-size:.82rem;color:#0f1b2d;margin:0 0 2px">✅ Quality Warranty</h4>
-      <p style="font-size:.72rem;color:#5a5a7a;margin:0">Full traceability & batch documentation. Covers manufacturing defects.</p>
-    </div>
-  </div>
-  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.07);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/authorization-letter.jpg','_blank')">
-    <a href="images/certs/authorization-letter.jpg" target="_blank" rel="noopener" onclick="event.stopPropagation()"><img src="images/certs/authorization-letter.jpg" loading="lazy" alt="Authorization Letter" style="width:100%;height:180px;object-fit:cover;display:block"></a>
-    <div style="padding:12px 14px">
-      <h4 style="font-size:.82rem;color:#0f1b2d;margin:0 0 2px">📜 Authorization Letter</h4>
-      <p style="font-size:.72rem;color:#5a5a7a;margin:0">Official corporate authorization for bidding & export documentation.</p>
-    </div>
-  </div>
-  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.07);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/usage-instructions.jpg','_blank')">
-    <a href="images/certs/usage-instructions.jpg" target="_blank" rel="noopener" onclick="event.stopPropagation()"><img src="images/certs/usage-instructions.jpg" loading="lazy" alt="Usage Instructions" style="width:100%;height:180px;object-fit:cover;display:block"></a>
-    <div style="padding:12px 14px">
-      <h4 style="font-size:.82rem;color:#0f1b2d;margin:0 0 2px">📖 Usage Instructions</h4>
-      <p style="font-size:.72rem;color:#5a5a7a;margin:0">Step-by-step installation guide and handling precautions.</p>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/ISO健康资质认证.png','_blank')">
+    <img src="images/certs/ISO健康资质认证.png" loading="lazy" alt="ISO 45001 Health & Safety" style="width:100%;height:180px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">ISO 45001:2018</div>
+      <div style="font-size:.68rem;color:#5a5a7a">Occupational Health &amp; Safety</div>
     </div>
   </div>
 </div>
 
-<!-- CTA -->
-<div style="background:linear-gradient(135deg,#0f1b2d,#1a3a5c);border-radius:12px;padding:24px;text-align:center;color:#fff;margin-top:10px">
-  <h3 style="font-size:1rem;color:#fff;margin:0 0 6px">Need to verify our certificates?</h3>
-  <p style="font-size:.82rem;opacity:.85;margin:0 0 14px">We provide high-resolution PDF copies &amp; third-party verification contacts.</p>
-  <div>
-    <a href="https://wa.me/8617729903561" target="_blank" rel="noopener" style="display:inline-block;background:#25d366;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700">Chat on WhatsApp</a>
-    <a href="mailto:57429760@qq.com" style="display:inline-block;background:#0056b3;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700;margin-left:10px">Send Email</a>
+<!-- Patents & Certificates -->
+<h3 style="font-size:1rem;margin:18px 0 12px;color:#0f1b2d">📜 Patents &amp; Certificates</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px">
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/发明证书封面.png','_blank')">
+    <img src="images/certs/发明证书封面.png" loading="lazy" alt="Invention Patent Certificate" style="width:100%;height:200px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">🏆 Invention Patent Certificate</div>
+      <div style="font-size:.68rem;color:#5a5a7a">National invention patent for resin anchoring agent formulation</div>
+    </div>
+  </div>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/锚固胶设备发明专利.png','_blank')">
+    <img src="images/certs/锚固胶设备发明专利.png" loading="lazy" alt="Equipment Invention Patent" style="width:100%;height:200px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">⚙️ Equipment Invention Patent</div>
+      <div style="font-size:.68rem;color:#5a5a7a">Patent for anchoring adhesive production equipment</div>
+    </div>
+  </div>
+</div>
+
+<!-- Test Reports -->
+<h3 style="font-size:1rem;margin:18px 0 12px;color:#0f1b2d">🔬 Product Test Reports</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px">
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/CK a锚固胶检测报告.png','_blank')">
+    <img src="images/certs/CK a锚固胶检测报告.png" loading="lazy" alt="CK a Anchoring Adhesive Test Report" style="width:100%;height:200px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">CK a Anchoring Adhesive Test</div>
+      <div style="font-size:.68rem;color:#5a5a7a">Full performance test report</div>
+    </div>
+  </div>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/MSK锚固胶检测报告.png','_blank')">
+    <img src="images/certs/MSK锚固胶检测报告.png" loading="lazy" alt="MSK Anchoring Adhesive Test" style="width:100%;height:200px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">MSK Anchoring Adhesive</div>
+      <div style="font-size:.68rem;color:#5a5a7a">Quality inspection report</div>
+    </div>
+  </div>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/msm锚固剂检测报告.png','_blank')">
+    <img src="images/certs/msm锚固剂检测报告.png" loading="lazy" alt="MSM Anchoring Agent Test" style="width:100%;height:200px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">MSM Anchoring Agent</div>
+      <div style="font-size:.68rem;color:#5a5a7a">Factory inspection report</div>
+    </div>
+  </div>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/MSZ锚固胶检测报告.png','_blank')">
+    <img src="images/certs/MSZ锚固胶检测报告.png" loading="lazy" alt="MSZ Anchoring Adhesive Test" style="width:100%;height:200px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">MSZ Anchoring Adhesive</div>
+      <div style="font-size:.68rem;color:#5a5a7a">Quality test report</div>
+    </div>
+  </div>
+</div>
+
+<!-- FRP Rod Test Reports -->
+<h3 style="font-size:1rem;margin:18px 0 12px;color:#0f1b2d">🏗️ FRP Anchor Rod Test Reports (2024)</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px">
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/M20玻璃钢锚杆检测报告.jpg','_blank')">
+    <img src="images/certs/M20玻璃钢锚杆检测报告.jpg" loading="lazy" alt="M20 FRP Rod Test Report" style="width:100%;height:200px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">M20 FRP Anchor Rod</div>
+      <div style="font-size:.68rem;color:#5a5a7a">2024 batch test report</div>
+    </div>
+  </div>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/M22玻璃钢锚杆检测报告.jpg','_blank')">
+    <img src="images/certs/M22玻璃钢锚杆检测报告.jpg" loading="lazy" alt="M22 FRP Rod Test Report" style="width:100%;height:200px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">M22 FRP Anchor Rod</div>
+      <div style="font-size:.68rem;color:#5a5a7a">2024 batch test report</div>
+    </div>
+  </div>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/M24玻璃钢锚杆.jpg','_blank')">
+    <img src="images/certs/M24玻璃钢锚杆.jpg" loading="lazy" alt="M24 FRP Rod Test Report" style="width:100%;height:200px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">M24 FRP Anchor Rod</div>
+      <div style="font-size:.68rem;color:#5a5a7a">2024 batch test report</div>
+    </div>
+  </div>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/M27玻璃钢锚杆检测报告.jpg','_blank')">
+    <img src="images/certs/M27玻璃钢锚杆检测报告.jpg" loading="lazy" alt="M27 FRP Rod Test Report" style="width:100%;height:200px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">M27 FRP Anchor Rod</div>
+      <div style="font-size:.68rem;color:#5a5a7a">2024 batch test report</div>
+    </div>
+  </div>
+</div>
+
+<!-- Other Documents -->
+<h3 style="font-size:1rem;margin:18px 0 12px;color:#0f1b2d">📋 Other Documents</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px">
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/金久开户行许可证.png','_blank')">
+    <img src="images/certs/金久开户行许可证.png" loading="lazy" alt="Bank Account License" style="width:100%;height:200px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">🏦 Bank Account License</div>
+      <div style="font-size:.68rem;color:#5a5a7a">Corporate bank account opening permit</div>
+    </div>
+  </div>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/authorization-letter.jpg','_blank')">
+    <img src="images/certs/authorization-letter.jpg" loading="lazy" alt="Authorization Letter" style="width:100%;height:200px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">📜 Authorization Letter</div>
+      <div style="font-size:.68rem;color:#5a5a7a">Official corporate authorization</div>
+    </div>
+  </div>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/quality-warranty.jpg','_blank')">
+    <img src="images/certs/quality-warranty.jpg" loading="lazy" alt="Quality Warranty" style="width:100%;height:200px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">✅ Quality Warranty</div>
+      <div style="font-size:.68rem;color:#5a5a7a">Product quality guarantee</div>
+    </div>
+  </div>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer" onclick="window.open('images/certs/usage-instructions.jpg','_blank')">
+    <img src="images/certs/usage-instructions.jpg" loading="lazy" alt="Usage Instructions" style="width:100%;height:200px;object-fit:cover;display:block">
+    <div style="padding:10px 12px">
+      <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">📖 Usage Instructions</div>
+      <div style="font-size:.68rem;color:#5a5a7a">Installation guide &amp; precautions</div>
+    </div>
+  </div>
+</div>
+
+<!-- PDF Documents -->
+<h3 style="font-size:1rem;margin:18px 0 12px;color:#0f1b2d">📄 PDF Documents</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px">
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer;padding:20px;text-align:center" onclick="window.open('images/certs/淮北金久新型材料有限公司誉4批次报名资料.pdf','_blank')">
+    <div style="font-size:2.5rem;margin-bottom:6px">📕</div>
+    <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">Company Registration Dossier</div>
+    <div style="font-size:.68rem;color:#5a5a7a">4-batch registration materials (PDF)</div>
+  </div>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer;padding:20px;text-align:center" onclick="window.open('images/certs/2024直径18锚杆检测报告.pdf','_blank')">
+    <div style="font-size:2.5rem;margin-bottom:6px">📗</div>
+    <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">⌀18 Rod Test Report</div>
+    <div style="font-size:.68rem;color:#5a5a7a">2024 batch (PDF)</div>
+  </div>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer;padding:20px;text-align:center" onclick="window.open('images/certs/2024直径20锚杆检测报告.pdf','_blank')">
+    <div style="font-size:2.5rem;margin-bottom:6px">📗</div>
+    <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">⌀20 Rod Test Report</div>
+    <div style="font-size:.68rem;color:#5a5a7a">2024 batch (PDF)</div>
+  </div>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer;padding:20px;text-align:center" onclick="window.open('images/certs/2024直径22锚杆检测报告.pdf','_blank')">
+    <div style="font-size:2.5rem;margin-bottom:6px">📗</div>
+    <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">⌀22 Rod Test Report</div>
+    <div style="font-size:.68rem;color:#5a5a7a">2024 batch (PDF)</div>
+  </div>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer;padding:20px;text-align:center" onclick="window.open('images/certs/2024直径24锚杆检测报告.pdf','_blank')">
+    <div style="font-size:2.5rem;margin-bottom:6px">📗</div>
+    <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">⌀24 Rod Test Report</div>
+    <div style="font-size:.68rem;color:#5a5a7a">2024 batch (PDF)</div>
+  </div>
+  <div style="background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden;cursor:pointer;padding:20px;text-align:center" onclick="window.open('images/certs/2024直径27锚杆检测报告.pdf','_blank')">
+    <div style="font-size:2.5rem;margin-bottom:6px">📗</div>
+    <div style="font-size:.78rem;font-weight:700;color:#0f1b2d">⌀27 Rod Test Report</div>
+    <div style="font-size:.68rem;color:#5a5a7a">2024 batch (PDF)</div>
   </div>
 </div>
 
