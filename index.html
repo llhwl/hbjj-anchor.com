@@ -812,7 +812,7 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 
 <div class="enquiry-form">
 <h3 data-i18n="contact-form-title">📩 Quick Inquiry</h3>
-<form id="enquiryForm" action="https://formspree.io/f/{{FORMSPREE_ID}}" method="POST" onsubmit="submitEnquiry(event)">
+<form id="enquiryForm" action="mailto:info@hbjj-anchor.com" method="POST" onsubmit="submitEnquiry(event)">
   <input type="text" name="name" placeholder="Your Name *" data-i18n="contact-form-name" required>
   <input type="email" name="email" placeholder="Your Email *" data-i18n="contact-form-email" required>
   <input type="text" name="company" placeholder="Company Name" data-i18n="contact-form-company">
@@ -1168,16 +1168,17 @@ function switchLang() {
 function submitEnquiry(e){
   e.preventDefault();
   var f=e.target;
-  var btn=f.querySelector('button[type=submit]');
-  var orig=btn?btn.textContent:'Send Inquiry \u2709';
-  if(btn){btn.disabled=true;btn.textContent='Sending\u2026';}
-  fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
-    .then(function(r){
-      if(r.ok){ f.reset(); alert('\u2705 Thank you! Your inquiry has been sent. We will reply within 24 hours.'); if(window.gtag)gtag('event','generate_lead',{method:'enquiry_form'}); }
-      else { throw new Error('formspree_error'); }
-    })
-    .catch(function(){ alert('\u26a0\ufe0f Submission failed. Please email us directly at info@hbjj-anchor.com or WhatsApp +86 177 2990 3561.'); })
-    .finally(function(){ if(btn){btn.disabled=false;btn.textContent=orig;} });
+  var name=(f.name&&f.name.value)||'';
+  var email=(f.email&&f.email.value)||'';
+  var company=(f.company&&f.company.value)||'';
+  var phone=(f.phone&&f.phone.value)||'';
+  var message=(f.message&&f.message.value)||'';
+  var subject='New Inquiry from hbjj-anchor.com';
+  var body='Name: '+name+'\nEmail: '+email+'\nCompany: '+company+'\nPhone/WhatsApp: '+phone+'\n\n'+message;
+  if(window.gtag)gtag('event','generate_lead',{method:'enquiry_form'});
+  f.reset();
+  alert('Your inquiry is ready. Your email client will open pre-filled to info@hbjj-anchor.com - just click Send.');
+  window.location.href='mailto:info@hbjj-anchor.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
 }
 </script>
 </body>
