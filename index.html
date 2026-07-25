@@ -157,18 +157,23 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 <div class="nav-inner">
   <div class="nav-logo">⚓ <span>JINJIU</span> ANCHOR RESIN</div>
   <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
-  <button class="lang-btn" onclick="switchLang()" id="lang-toggle">🌐 中文</button>
+  <select id="lang-select" class="lang-btn" onchange="applyLang(this.value)" aria-label="Select language">
+    <option value="en">🌐 English</option>
+    <option value="zh">🌐 中文</option>
+    <option value="ru">🌐 Русский</option>
+    <option value="tr">🌐 Türkçe</option>
+  </select>
   <ul class="nav-links" id="nav-menu">
-    <li><a href="#" onclick='go("home")' class="active" id="nv-home">Home</a></li>
-    <li><a href="#" onclick='go("about")' id="nv-about">About</a></li>
-    <li><a href="#" onclick='go("certs")' id="nv-certs">Certificates</a></li>
-    <li><a href="#" onclick='go("products")' id="nv-products">Products</a></li>
-    <li><a href="#" onclick='go("order")' id="nv-order">Order</a></li>
-    <li><a href="#" onclick='go("factory-strength")' id="nv-factory-strength">Factory Strength</a></li>
-    <li><a href="#" onclick='go("contact")' id="nv-contact">Contact</a></li>
-    <li><a href="#" onclick='go("tech")' id="nv-tech">Tech</a></li>
-    <li><a href="#" onclick='go("gallery")' id="nv-gallery">Gallery</a></li>
-    <li><a href="#" onclick='go("frp-rods")' id="nv-frp-rods">FRP Rods</a></li>
+    <li><a href="#" onclick='go("home")' class="active" id="nv-home" data-i18n="nav-home">Home</a></li>
+    <li><a href="#" onclick='go("about")' id="nv-about" data-i18n="nav-about">About</a></li>
+    <li><a href="#" onclick='go("certs")' id="nv-certs" data-i18n="nav-certs">Certificates</a></li>
+    <li><a href="#" onclick='go("products")' id="nv-products" data-i18n="nav-products">Products</a></li>
+    <li><a href="#" onclick='go("order")' id="nv-order" data-i18n="nav-order">Order</a></li>
+    <li><a href="#" onclick='go("factory-strength")' id="nv-factory-strength" data-i18n="nav-factory-strength">Factory Strength</a></li>
+    <li><a href="#" onclick='go("contact")' id="nv-contact" data-i18n="nav-contact">Contact</a></li>
+    <li><a href="#" onclick='go("tech")' id="nv-tech" data-i18n="nav-tech">Tech</a></li>
+    <li><a href="#" onclick='go("gallery")' id="nv-gallery" data-i18n="nav-gallery">Gallery</a></li>
+    <li><a href="#" onclick='go("frp-rods")' id="nv-frp-rods" data-i18n="nav-frp-rods">FRP Rods</a></li>
   <li><a href="blog/index.html" id="nv-blog">Blog</a></li>
   </ul>
 </div>
@@ -185,36 +190,36 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
   </div>
   <div style="margin-top:18px">
     <a href="#" class="hero-cta" data-i18n="hero-cta" onclick='go("contact")'>📩 Send Inquiry</a>
-    <a href="https://wa.me/8617729903561" target="_blank" class="btn-whatsapp" rel="noopener">💬 WhatsApp: +86 177 2990 3561</a>
+    <a href="https://wa.me/8617729903561" target="_blank" class="btn-whatsapp" rel="noopener" data-i18n="hero-whatsapp">💬 WhatsApp: +86 177 2990 3561</a>
   </div>
 </div>
 
 <div class="card-grid">
-<div class="card" onclick='go("about")'><div class="card-img" style="background-image:url(images/factory-warehouse-ready.jpg)"></div><div class="card-body"><h3>About Jinjiu</h3><p>20+ years, 16,000 sqm factory, 3 automated lines. Serving mining & construction worldwide.</p><span class="more"><span data-i18n="card-about-more">Learn More</span> →</span></div></div>
-<div class="card" onclick='go("certs")'><div class="card-img" style="background-image:url(images/jinjiu-office-building.jpg)"></div><div class="card-body"><h3>Certificates</h3><p>Patent, test reports, quality warranty, ISO 9001/14001/45001, MA Safety certifications.</p><span class="more"><span data-i18n="card-certs-more">View Certificates</span> →</span></div></div>
-<div class="card" onclick='go("products")'><div class="card-img" style="background-image:url(images/anchor-carton-packaging.jpg)"></div><div class="card-body"><h3>Products</h3><p>Resin capsules, epoxy, MG resin, FRP rods. Full specs & technical data with detail pages.</p><span class="more"><span data-i18n="card-products-more">View Products</span> →</span></div></div>
-<div class="card" onclick='go("order")'><div class="card-img" style="background-image:url(images/legal-person-studio.jpg)"></div><div class="card-body"><h3>How to Order</h3><p>8-step process: inquiry → quote → sample → production → inspection → shipment.</p><span class="more"><span data-i18n="card-order-more">View Process</span> →</span></div></div>
-<div class="card" onclick='go("factory-strength")'><div class="card-img" style="background-image:url(images/factory-strength-russian-client.jpg)"></div><div class="card-body"><h3>Factory Strength</h3><p>16,000 sqm facility, automated production lines, R&D lab, strict QC — Jinjiu's manufacturing power.</p><span class="more"><span data-i18n="card-factory-more">Explore Factory</span> →</span></div></div>
-<div class="card" onclick='go("contact")'><div class="card-img" style="background-image:url(images/contact-office-building.jpg)"></div><div class="card-body"><h3>Contact Us</h3><p>Email, WhatsApp, Alibaba Store. Reply within 24 hours. Free samples available.</p><span class="more"><span data-i18n="card-contact-more">Get in Touch</span> →</span></div></div>
-<div class="card" onclick='go("tech")'><div class="card-img" style="background-image:url(images/tech-spec-indicators.png)"></div><div class="card-body"><h3>Technical Docs</h3><p>Specifications, testing methods, product classification, naming guide & performance terms.</p><span class="more"><span data-i18n="card-tech-more">View Docs</span> →</span></div></div>
-<div class="card" onclick='go("gallery")'><div class="card-img" style="background-image:url(images/export-turkey-pallet.jpg)"></div><div class="card-body"><h3>Factory Gallery</h3><p>Real photos — production lines, packaging, loading, export to Turkey, Russia & more.</p><span class="more"><span data-i18n="card-gallery-more">View Gallery</span> →</span></div></div>
-<div class="card" onclick='go("frp-rods")'><div class="card-img" style="background-image:url(images/frp-rod-contact.jpg)"></div><div class="card-body"><h3>FRP Anchor Rods</h3><p>Glass fiber reinforced polymer rods — full specs, applications, and MA safety certified.</p><span class="more"><span data-i18n="card-frp-more">View Details</span> →</span></div></div>
+<div class="card" onclick='go("about")'><div class="card-img" style="background-image:url(images/factory-warehouse-ready.jpg)"></div><div class="card-body"><h3 data-i18n="card-about-title">About Jinjiu</h3><p data-i18n="card-about-desc">20+ years, 16,000 sqm factory, 3 automated lines. Serving mining & construction worldwide.</p><span class="more"><span data-i18n="card-about-more">Learn More</span> →</span></div></div>
+<div class="card" onclick='go("certs")'><div class="card-img" style="background-image:url(images/jinjiu-office-building.jpg)"></div><div class="card-body"><h3 data-i18n="card-certs-title">Certificates</h3><p data-i18n="card-certs-desc">Patent, test reports, quality warranty, ISO 9001/14001/45001, MA Safety certifications.</p><span class="more"><span data-i18n="card-certs-more">View Certificates</span> →</span></div></div>
+<div class="card" onclick='go("products")'><div class="card-img" style="background-image:url(images/anchor-carton-packaging.jpg)"></div><div class="card-body"><h3 data-i18n="card-products-title">Products</h3><p data-i18n="card-products-desc">Resin capsules, epoxy, MG resin, FRP rods. Full specs & technical data with detail pages.</p><span class="more"><span data-i18n="card-products-more">View Products</span> →</span></div></div>
+<div class="card" onclick='go("order")'><div class="card-img" style="background-image:url(images/legal-person-studio.jpg)"></div><div class="card-body"><h3 data-i18n="card-order-title">How to Order</h3><p data-i18n="card-order-desc">8-step process: inquiry → quote → sample → production → inspection → shipment.</p><span class="more"><span data-i18n="card-order-more">View Process</span> →</span></div></div>
+<div class="card" onclick='go("factory-strength")'><div class="card-img" style="background-image:url(images/factory-strength-russian-client.jpg)"></div><div class="card-body"><h3 data-i18n="card-factory-title">Factory Strength</h3><p data-i18n="card-factory-desc">16,000 sqm facility, automated production lines, R&D lab, strict QC — Jinjiu's manufacturing power.</p><span class="more"><span data-i18n="card-factory-more">Explore Factory</span> →</span></div></div>
+<div class="card" onclick='go("contact")'><div class="card-img" style="background-image:url(images/contact-office-building.jpg)"></div><div class="card-body"><h3 data-i18n="card-contact-title">Contact Us</h3><p data-i18n="card-contact-desc">Email, WhatsApp, Alibaba Store. Reply within 24 hours. Free samples available.</p><span class="more"><span data-i18n="card-contact-more">Get in Touch</span> →</span></div></div>
+<div class="card" onclick='go("tech")'><div class="card-img" style="background-image:url(images/tech-spec-indicators.png)"></div><div class="card-body"><h3 data-i18n="card-tech-title">Technical Docs</h3><p data-i18n="card-tech-desc">Specifications, testing methods, product classification, naming guide & performance terms.</p><span class="more"><span data-i18n="card-tech-more">View Docs</span> →</span></div></div>
+<div class="card" onclick='go("gallery")'><div class="card-img" style="background-image:url(images/export-turkey-pallet.jpg)"></div><div class="card-body"><h3 data-i18n="card-gallery-title">Factory Gallery</h3><p data-i18n="card-gallery-desc">Real photos — production lines, packaging, loading, export to Turkey, Russia & more.</p><span class="more"><span data-i18n="card-gallery-more">View Gallery</span> →</span></div></div>
+<div class="card" onclick='go("frp-rods")'><div class="card-img" style="background-image:url(images/frp-rod-contact.jpg)"></div><div class="card-body"><h3 data-i18n="card-frp-title">FRP Anchor Rods</h3><p data-i18n="card-frp-desc">Glass fiber reinforced polymer rods — full specs, applications, and MA safety certified.</p><span class="more"><span data-i18n="card-frp-more">View Details</span> →</span></div></div>
 </div>
 </div>
 
 <!-- ABOUT -->
 <div class="page" id="pg-about">
-<a class="btn-back" onclick='go("home")'>← Back to Home</a>
+<a class="btn-back" onclick='go("home")' data-i18n="back-home">← Back to Home</a>
 <h2 data-i18n="about-title">About Huaibei Jinjiu New Materials Co., Ltd.</h2>
 <div class="row2">
 <div>
 <p style="margin-bottom:12px;line-height:1.7"><span data-i18n="about-p1">Founded in <strong>2004</strong>, Huaibei Jinjiu New Materials Co., Ltd. is a professional manufacturer of resin anchoring agents, FRP anchor rods, MG resin and mining support materials based in Anhui, China.</p>
-<p style="margin-bottom:12px;line-height:1.7">With a <strong>16,000+ sqm</strong> factory, <strong>3 fully automated production lines</strong>, and over <strong>100 employees</strong>, we serve mining, tunneling and construction clients across <strong>30+ countries</strong> including Russia, Turkey, Indonesia, South Africa, Chile, Vietnam, Peru, Poland, and Brazil.</p>
-<p style="line-height:1.7">Our products are used in coal mine roadway bolting, tunnel support, slope stabilization, foundation anchoring, and civil engineering projects worldwide.</p>
+<p style="margin-bottom:12px;line-height:1.7" data-i18n="about-p2">With a <strong>16,000+ sqm</strong> factory, <strong>3 fully automated production lines</strong>, and over <strong>100 employees</strong>, we serve mining, tunneling and construction clients across <strong>30+ countries</strong> including Russia, Turkey, Indonesia, South Africa, Chile, Vietnam, Peru, Poland, and Brazil.</p>
+<p style="line-height:1.7" data-i18n="about-p3">Our products are used in coal mine roadway bolting, tunnel support, slope stabilization, foundation anchoring, and civil engineering projects worldwide.</p>
 </div>
 <div><img src="images/factory-warehouse-ready.jpg" style="border-radius:8px;width:100%" alt="Jinjiu factory and warehouse overview"></div>
 </div>
-<h3>Production Capacity</h3>
+<h3 data-i18n="about-capacity">Production Capacity</h3>
 <table class="tbl">
 <tr><td>Resin Anchor Capsules</td><td>12,000,000 pcs / year</td></tr>
 <tr><td>MG Resin (Unsaturated Polyester)</td><td>5,000 tons / year</td></tr>
@@ -222,58 +227,58 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 <tr><td>FRP Anchor Rods (complete set)</td><td>500,000 sets / year</td></tr>
 <tr><td>Inner Packaging Bags</td><td>300 tons / year</td></tr>
 </table>
-<h3>Factory Tour</h3>
+<h3 data-i18n="about-tour">Factory Tour</h3>
 <div class="row2">
 <div>
 <video controls preload="none" poster="images/factory-warehouse-products.jpg" style="width:100%;border-radius:8px">
   <source src="videos/factory-production-line.mp4" type="video/mp4">
 </video>
-<p style="text-align:center;font-size:.8rem;color:#888;margin-top:4px">Automatic Resin Capsule Production Line</p>
+<p style="text-align:center;font-size:.8rem;color:#888;margin-top:4px" data-i18n="about-video1-label">Automatic Resin Capsule Production Line</p>
 </div>
 <div>
 <video controls preload="none" poster="images/cka-b2360-anchor.jpg" style="width:100%;border-radius:8px">
   <source src="videos/anchor-2360-production.mp4" type="video/mp4">
 </video>
-<p style="text-align:center;font-size:.8rem;color:#888;margin-top:4px">CKa b2360 Anchor Capsule Production</p>
+<p style="text-align:center;font-size:.8rem;color:#888;margin-top:4px" data-i18n="about-video2-label">CKa b2360 Anchor Capsule Production</p>
 </div>
 </div>
-<div style="text-align:center;background:#f0f4f8;padding:20px;border-radius:10px;margin-top:24px"><h3 style="font-size:.95rem;margin-bottom:8px;color:#0f1b2d">Lets work together</h3><p style="font-size:.82rem;color:#5a5a7a;margin-bottom:14px">Contact us for product recommendations and free samples.</p><div><a href="https://wa.me/8617729903561" target="_blank" rel="noopener" style="display:inline-block;background:#25d366;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700">Chat on WhatsApp</a><a href="mailto:info@hbjj-anchor.com" style="display:inline-block;background:#0056b3;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700;margin-left:10px">Send Email</a></div></div>
+<div style="text-align:center;background:#f0f4f8;padding:20px;border-radius:10px;margin-top:24px"><h3 style="font-size:.95rem;margin-bottom:8px;color:#0f1b2d" data-i18n="cta-together-title">Lets work together</h3><p style="font-size:.82rem;color:#5a5a7a;margin-bottom:14px" data-i18n="cta-together-desc">Contact us for product recommendations and free samples.</p><div><a href="https://wa.me/8617729903561" target="_blank" rel="noopener" style="display:inline-block;background:#25d366;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700">Chat on WhatsApp</a><a href="mailto:info@hbjj-anchor.com" style="display:inline-block;background:#0056b3;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700;margin-left:10px">Send Email</a></div></div>
 </div>
 
 <!-- PRODUCTS -->
 <div class="page" id="pg-products">
-<a class="btn-back" onclick='go("home")'>← Back to Home</a>
+<a class="btn-back" onclick='go("home")' data-i18n="back-home">← Back to Home</a>
 <h2 data-i18n="products-title">Products</h2>
 <p style="color:#5a5a7a;font-size:.85rem;margin-bottom:14px"><span data-i18n="products-hint">Click any product for detailed specs, applications and features.</span></p>
 <div class="certs">
 
 <div class="cert-item" style="cursor:pointer">
 <a href="images/prod-preview-resin.jpg" target="_blank" rel="noopener" onclick="event.stopPropagation()"><img src="images/prod-preview-resin.jpg" loading="lazy" alt="Resin anchor capsule"></a>
-<div onclick='go("prod-resin-capsule")'><h4>🧱 Resin Anchor Capsule</h4><p>Polyester resin capsules for mine bolting, tunnel support & slope stabilization. <span style="color:#0056b3;font-weight:600">Click for details →</span></p></div>
+<div onclick='go("prod-resin-capsule")'><h4 data-i18n="prod-resin-capsule">🧱 Resin Anchor Capsule</h4><p data-i18n="prod-resin-capsule-desc">Polyester resin capsules for mine bolting, tunnel support & slope stabilization. <span style="color:#0056b3;font-weight:600" data-i18n="prod-click">Click for details →</span></p></div>
 </div>
 
 <div class="cert-item" style="cursor:pointer">
 <a href="images/prod-preview-epoxy.jpg" target="_blank" rel="noopener" onclick="event.stopPropagation()"><img src="images/prod-preview-epoxy.jpg" loading="lazy" alt="Epoxy adhesive"></a>
-<div onclick='go("prod-epoxy")'><h4>🔩 Epoxy Adhesive</h4><p>Two-component epoxy for structural anchoring. Cures underwater. <span style="color:#0056b3;font-weight:600">Click for details →</span></p></div>
+<div onclick='go("prod-epoxy")'><h4 data-i18n="prod-epoxy">🔩 Epoxy Adhesive</h4><p data-i18n="prod-epoxy-desc">Two-component epoxy for structural anchoring. Cures underwater. <span style="color:#0056b3;font-weight:600" data-i18n="prod-click">Click for details →</span></p></div>
 </div>
 
 <div class="cert-item" style="cursor:pointer">
 <a href="images/prod-preview-mg.jpg" target="_blank" rel="noopener" onclick="event.stopPropagation()"><img src="images/prod-preview-mg.jpg" loading="lazy" alt="MG resin"></a>
-<div onclick='go("prod-mg-resin")'><h4>⚗️ MG Resin</h4><p>Unsaturated polyester resin for capsule manufacturing & grouting. <span style="color:#0056b3;font-weight:600">Click for details →</span></p></div>
+<div onclick='go("prod-mg-resin")'><h4 data-i18n="prod-mg-resin">⚗️ MG Resin</h4><p data-i18n="prod-mg-resin-desc">Unsaturated polyester resin for capsule manufacturing & grouting. <span style="color:#0056b3;font-weight:600" data-i18n="prod-click">Click for details →</span></p></div>
 </div>
 
 <div class="cert-item" style="cursor:pointer">
 <a href="images/prod-preview-frp.jpg" target="_blank" rel="noopener" onclick="event.stopPropagation()"><img src="images/prod-preview-frp.jpg" loading="lazy" alt="FRP anchor rod system"></a>
-<div onclick='go("prod-frp-rod")'><h4>🔄 FRP Anchor Rod System</h4><p>Complete system: rods, plates, nuts & inner bags. Fire-resistant & anti-static. <span style="color:#0056b3;font-weight:600">Click for details →</span></p></div>
+<div onclick='go("prod-frp-rod")'><h4 data-i18n="prod-frp-rod">🔄 FRP Anchor Rod System</h4><p data-i18n="prod-frp-rod-desc">Complete system: rods, plates, nuts & inner bags. Fire-resistant & anti-static. <span style="color:#0056b3;font-weight:600" data-i18n="prod-click">Click for details →</span></p></div>
 </div>
 </div>
-<div style="text-align:center;background:#f0f4f8;padding:20px;border-radius:10px;margin-top:20px"><h3 style="font-size:.95rem;margin-bottom:8px;color:#0f1b2d">Cant find what you need?</h3><p style="font-size:.82rem;color:#5a5a7a;margin-bottom:14px">Custom formulations and OEM service available. Talk to us.</p><div><a href="https://wa.me/8617729903561" target="_blank" rel="noopener" style="display:inline-block;background:#25d366;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700">Chat on WhatsApp</a><a href="mailto:info@hbjj-anchor.com" style="display:inline-block;background:#0056b3;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700;margin-left:10px">Send Email</a></div></div>
+<div style="text-align:center;background:#f0f4f8;padding:20px;border-radius:10px;margin-top:20px"><h3 style="font-size:.95rem;margin-bottom:8px;color:#0f1b2d" data-i18n="cta-find-title">Cant find what you need?</h3><p style="font-size:.82rem;color:#5a5a7a;margin-bottom:14px" data-i18n="cta-find-desc">Custom formulations and OEM service available. Talk to us.</p><div><a href="https://wa.me/8617729903561" target="_blank" rel="noopener" style="display:inline-block;background:#25d366;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700">Chat on WhatsApp</a><a href="mailto:info@hbjj-anchor.com" style="display:inline-block;background:#0056b3;color:#fff;padding:10px 24px;border-radius:6px;font-size:.85rem;font-weight:700;margin-left:10px">Send Email</a></div></div>
 </div>
 
 <!-- PRODUCT DETAIL: Resin Anchor Capsule -->
 <div class="page" id="pg-prod-resin-capsule">
-<a class="btn-back" onclick='go("products")'>← Back to Products</a>
-<h2>🧱 Resin Anchor Capsule</h2>
+<a class="btn-back" onclick='go("products")' data-i18n="back-products">← Back to Products</a>
+<h2 data-i18n="prod-resin-capsule">🧱 Resin Anchor Capsule</h2>
 <div class="row2">
 <div>
 <table class="tbl">
@@ -291,9 +296,9 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 </div>
 <div><img src="images/prod-3535-packaging.jpg" style="border-radius:8px;width:100%" alt="3535 anchor capsule packaging"></div>
 </div>
-<h3>Applications</h3>
-<p>Mine roadway bolting, tunnel support, slope stabilization, foundation anchoring, rock reinforcement in civil and mining engineering projects.</p>
-<h3>Key Features</h3>
+<h3 data-i18n="prod-apps-title">Applications</h3>
+<p data-i18n="prod-resin-capsule-apps">Mine roadway bolting, tunnel support, slope stabilization, foundation anchoring, rock reinforcement in civil and mining engineering projects.</p>
+<h3 data-i18n="prod-features-title">Key Features</h3>
 <ul class="features">
 <li>Fast gel time for quick installation cycles — reduces downtime</li>
 <li>High pull-out strength ensures reliable anchoring in all rock conditions</li>
@@ -315,8 +320,8 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 
 <!-- PRODUCT DETAIL: Epoxy Adhesive -->
 <div class="page" id="pg-prod-epoxy">
-<a class="btn-back" onclick='go("products")'>← Back to Products</a>
-<h2>🔩 Epoxy Adhesive</h2>
+<a class="btn-back" onclick='go("products")' data-i18n="back-products">← Back to Products</a>
+<h2 data-i18n="prod-epoxy">🔩 Epoxy Adhesive</h2>
 <div class="row2">
 <div>
 <table class="tbl">
@@ -333,9 +338,9 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 </div>
 <div><img src="images/prod-epoxy-adhesive.jpg" style="border-radius:8px;width:100%" alt="Jinjiu epoxy anchor adhesive"></div>
 </div>
-<h3>Applications</h3>
-<p>Structural anchoring, rebar doweling, foundation bolting, heavy machinery fixing, concrete and masonry repair. Suitable for concrete, brick, stone and steel substrates.</p>
-<h3>Key Features</h3>
+<h3 data-i18n="prod-apps-title">Applications</h3>
+<p data-i18n="prod-epoxy-apps">Structural anchoring, rebar doweling, foundation bolting, heavy machinery fixing, concrete and masonry repair. Suitable for concrete, brick, stone and steel substrates.</p>
+<h3 data-i18n="prod-features-title">Key Features</h3>
 <ul class="features">
 <li>Underwater curing capability — ideal for wet boreholes and marine environments</li>
 <li>High bond and compressive strength for heavy load applications</li>
@@ -356,8 +361,8 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 
 <!-- PRODUCT DETAIL: MG Resin -->
 <div class="page" id="pg-prod-mg-resin">
-<a class="btn-back" onclick='go("products")'>← Back to Products</a>
-<h2>⚗️ MG Resin (Unsaturated Polyester)</h2>
+<a class="btn-back" onclick='go("products")' data-i18n="back-products">← Back to Products</a>
+<h2 data-i18n="prod-mg-resin">⚗️ MG Resin (Unsaturated Polyester)</h2>
 <div class="row2">
 <div>
 <table class="tbl">
@@ -371,9 +376,9 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 </div>
 <div><img src="images/resin-synthesis-process.png" style="border-radius:8px;width:100%" alt="MG resin production process diagram"></div>
 </div>
-<h3>Applications</h3>
-<p>Raw material for resin anchor capsule production, mining grouting operations, and industrial anchoring applications requiring custom-formulated polyester resin.</p>
-<h3>Key Features</h3>
+<h3 data-i18n="prod-apps-title">Applications</h3>
+<p data-i18n="prod-mg-resin-apps">Raw material for resin anchor capsule production, mining grouting operations, and industrial anchoring applications requiring custom-formulated polyester resin.</p>
+<h3 data-i18n="prod-features-title">Key Features</h3>
 <ul class="features">
 <li>Consistent viscosity for uniform capsule filling in automated production lines</li>
 <li>Adjustable curing time to match different application requirements</li>
@@ -394,8 +399,8 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 
 <!-- PRODUCT DETAIL: FRP Anchor Rod -->
 <div class="page" id="pg-prod-frp-rod">
-<a class="btn-back" onclick='go("products")'>← Back to Products</a>
-<h2>🔄 FRP Anchor Rod System (Jinmao Fiberglass)</h2>
+<a class="btn-back" onclick='go("products")' data-i18n="back-products">← Back to Products</a>
+<h2 data-i18n="prod-frp-rod">🔄 FRP Anchor Rod System (Jinmao Fiberglass)</h2>
 <div class="row2">
 <div>
 <table class="tbl">
@@ -411,9 +416,9 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 </div>
 <div><img src="images/prod-frp-rod-1.jpg" style="border-radius:8px;width:100%" alt="FRP anchor rod detail view"></div>
 </div>
-<h3>Applications</h3>
-<p>Coal mine roadway support, tunneling operations, slope stabilization, foundation reinforcement. Suitable for underground mining and civil engineering where fire resistance is required.</p>
-<h3>Key Features</h3>
+<h3 data-i18n="prod-apps-title">Applications</h3>
+<p data-i18n="prod-frp-rod-apps">Coal mine roadway support, tunneling operations, slope stabilization, foundation reinforcement. Suitable for underground mining and civil engineering where fire resistance is required.</p>
+<h3 data-i18n="prod-features-title">Key Features</h3>
 <ul class="features">
 <li>Lightweight — only 1/4 the weight of steel rods, reducing labor fatigue</li>
 <li>Non-corrosive — excellent chemical resistance, ideal for corrosive environments</li>
@@ -435,9 +440,9 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 
 <!-- GALLERY -->
 <div class="page" id="pg-gallery">
-<a class="btn-back" onclick='go("home")'>← Back to Home</a>
+<a class="btn-back" onclick='go("home")' data-i18n="back-home">← Back to Home</a>
 <h2 data-i18n="gallery-title">Factory & Product Gallery</h2>
-<p style="color:#5a5a7a;font-size:.82rem;margin-bottom:14px">Click any image to view full size — real photos from our factory and exports</p>
+<p style="color:#5a5a7a;font-size:.82rem;margin-bottom:14px" data-i18n="gallery-hint">Click any image to view full size — real photos from our factory and exports</p>
 <div class="gal">
 <div class="gcard"><a href="images/resin-anchor-product.jpg" target="_blank" rel="noopener"><img src="images/resin-anchor-product.jpg" loading="lazy" alt="Resin anchor capsule product"></a><span>Resin Anchor Capsule</span></div>
 <div class="gcard"><a href="images/anchor-2350-export-russia.jpg" target="_blank" rel="noopener"><img src="images/anchor-2350-export-russia.jpg" loading="lazy" alt="Anchor 2350 export to Russia"></a><span>2350 Export Russia</span></div>
@@ -459,9 +464,9 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 
 <!-- TECHNICAL DOCUMENTS -->
 <div class="page" id="pg-tech">
-<a class="btn-back" onclick='go("home")'>← Back to Home</a>
+<a class="btn-back" onclick='go("home")' data-i18n="back-home">← Back to Home</a>
 <h2 data-i18n="tech-title">Technical Documents</h2>
-<p style="color:#5a5a7a;font-size:.82rem;margin-bottom:14px">Click any document image to view full size</p>
+<p style="color:#5a5a7a;font-size:.82rem;margin-bottom:14px" data-i18n="tech-hint">Click any document image to view full size</p>
 
 <p data-i18n="tech-intro" style="max-width:780px;color:#3a4a5d;line-height:1.75;margin:0 0 18px">Jinjiu runs an in-house R&amp;D and testing center.</p>
 
@@ -499,9 +504,9 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 
 <!-- CERTIFICATES -->
 <div class="page" id="pg-certs">
-<a class="btn-back" onclick='go("home")'>← Back to Home</a>
+<a class="btn-back" onclick='go("home")' data-i18n="back-home">← Back to Home</a>
 <h2 data-i18n="certs-title" style="font-size:1.3rem">Certificates &amp; Quality Assurance</h2>
-<p style="color:#5a5a7a;font-size:.82rem;margin-bottom:18px">Click any certificate image to view full size — all certifications are authentic and verifiable.</p>
+<p style="color:#5a5a7a;font-size:.82rem;margin-bottom:18px" data-i18n="certs-hint">Click any certificate image to view full size — all certifications are authentic and verifiable.</p>
 
 <!-- ISO Certifications Row -->
 <h3 style="font-size:1rem;margin:18px 0 12px;color:#0f1b2d">🏅 ISO Management System Certifications</h3>
@@ -686,18 +691,18 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 
 <!-- ORDER --><!-- ORDER -->
 <div class="page" id="pg-order">
-<a class="btn-back" onclick='go("home")'>← Back to Home</a>
+<a class="btn-back" onclick='go("home")' data-i18n="back-home">← Back to Home</a>
 
 <div style="background:linear-gradient(135deg,#0f1b2d 0%,#1a3a5c 100%);color:#fff;padding:30px 24px;border-radius:10px;text-align:center;margin-bottom:24px">
-<h2 style="color:#fff;border:none;font-size:1.3rem;margin-bottom:8px">🚀 How to Order from Jinjiu</h2>
-<p style="font-size:.88rem;opacity:.9;max-width:600px;margin:0 auto">We make it easy for you — from first inquiry to delivery at your site. No matter where you are in the world.</p>
+<h2 style="color:#fff;border:none;font-size:1.3rem;margin-bottom:8px" data-i18n="order-title">🚀 How to Order from Jinjiu</h2>
+<p style="font-size:.88rem;opacity:.9;max-width:600px;margin:0 auto" data-i18n="order-hint">We make it easy for you — from first inquiry to delivery at your site. No matter where you are in the world.</p>
 </div>
 
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-bottom:20px">
 
 <div style="background:#fff;padding:18px 20px;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.07);border-top:3px solid #25d366">
-<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d">💬 1. Send Us a Message</h3>
-<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6">Tell us what you need — product type, quantity, and destination port. We reply within <strong>24 hours</strong>.</p>
+<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d" data-i18n="order-step1-title">💬 1. Send Us a Message</h3>
+<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6" data-i18n="order-step1-desc">Tell us what you need — product type, quantity, and destination port. We reply within <strong>24 hours</strong>.</p>
 <div style="margin-top:10px">
 <a href="https://wa.me/8617729903561" target="_blank" rel="noopener" style="display:inline-block;background:#25d366;color:#fff;padding:8px 20px;border-radius:6px;font-size:.82rem;font-weight:600">Chat on WhatsApp Now →</a>
 <a href="mailto:info@hbjj-anchor.com" style="display:inline-block;background:#0056b3;color:#fff;padding:8px 20px;border-radius:6px;font-size:.82rem;font-weight:600;margin-left:8px">Send Email</a>
@@ -705,38 +710,38 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 </div>
 
 <div style="background:#fff;padding:18px 20px;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.07);border-top:3px solid #e8590c">
-<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d">📋 2. Get a Quote</h3>
-<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6">We'll send you a detailed <strong>FOB or CIF quotation</strong> with pricing, lead time, and packaging options within 1 business day.</p>
+<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d" data-i18n="order-step2-title">📋 2. Get a Quote</h3>
+<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6" data-i18n="order-step2-desc">We'll send you a detailed <strong>FOB or CIF quotation</strong> with pricing, lead time, and packaging options within 1 business day.</p>
 </div>
 
 <div style="background:#fff;padding:18px 20px;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.07);border-top:3px solid #4dabf7">
-<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d">🎁 3. Free Samples</h3>
-<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6"><strong>50–200 pcs free samples</strong>. You only pay shipping, and we refund it on your first order. Test our quality risk-free.</p>
+<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d" data-i18n="order-step3-title">🎁 3. Free Samples</h3>
+<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6" data-i18n="order-step3-desc"><strong>50–200 pcs free samples</strong>. You only pay shipping, and we refund it on your first order. Test our quality risk-free.</p>
 </div>
 
 <div style="background:#fff;padding:18px 20px;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.07);border-top:3px solid #845ef7">
-<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d">📄 4. Confirm & Pay</h3>
-<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6">Proforma Invoice issued. <strong>30% T/T deposit</strong> to start production. Balance before shipment. L/C accepted for orders over $50K.</p>
+<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d" data-i18n="order-step4-title">📄 4. Confirm & Pay</h3>
+<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6" data-i18n="order-step4-desc">Proforma Invoice issued. <strong>30% T/T deposit</strong> to start production. Balance before shipment. L/C accepted for orders over $50K.</p>
 </div>
 
 <div style="background:#fff;padding:18px 20px;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.07);border-top:3px solid #fcc419">
-<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d">🏭 5. Production</h3>
-<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6"><strong>15–20 days</strong> lead time. We send you <strong>weekly progress photos</strong> via WhatsApp so you can see your order being made.</p>
+<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d" data-i18n="order-step5-title">🏭 5. Production</h3>
+<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6" data-i18n="order-step5-desc"><strong>15–20 days</strong> lead time. We send you <strong>weekly progress photos</strong> via WhatsApp so you can see your order being made.</p>
 </div>
 
 <div style="background:#fff;padding:18px 20px;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.07);border-top:3px solid #20c997">
-<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d">✅ 6. Quality Check</h3>
-<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6">Internal QC on every batch. <strong>SGS third-party inspection available</strong> upon request. Only quality products leave our factory.</p>
+<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d" data-i18n="order-step6-title">✅ 6. Quality Check</h3>
+<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6" data-i18n="order-step6-desc">Internal QC on every batch. <strong>SGS third-party inspection available</strong> upon request. Only quality products leave our factory.</p>
 </div>
 
 <div style="background:#fff;padding:18px 20px;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.07);border-top:3px solid #1c7ed6">
-<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d">🚢 7. Shipment</h3>
-<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6"><strong>FOB Shanghai/Qingdao</strong> or CIF to your port. FCL preferred, LCL available for trials. Full documents: CO, CI, PL, BL.</p>
+<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d" data-i18n="order-step7-title">🚢 7. Shipment</h3>
+<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6" data-i18n="order-step7-desc"><strong>FOB Shanghai/Qingdao</strong> or CIF to your port. FCL preferred, LCL available for trials. Full documents: CO, CI, PL, BL.</p>
 </div>
 
 <div style="background:#fff;padding:18px 20px;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.07);border-top:3px solid #e64980">
-<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d">🤝 8. After-Sales Support</h3>
-<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6"><strong>24/7 WhatsApp support</strong>. We follow up on your reorder schedule so you never run out of stock.</p>
+<h3 style="font-size:.95rem;margin-bottom:6px;color:#0f1b2d" data-i18n="order-step8-title">🤝 8. After-Sales Support</h3>
+<p style="font-size:.8rem;color:#5a5a7a;line-height:1.6" data-i18n="order-step8-desc"><strong>24/7 WhatsApp support</strong>. We follow up on your reorder schedule so you never run out of stock.</p>
 </div>
 
 </div>
@@ -755,7 +760,7 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 
 <!-- FACTORY STRENGTH -->
 <div class="page" id="pg-factory-strength">
-<a class="btn-back" onclick='go("home")'>← Back to Home</a>
+<a class="btn-back" onclick='go("home")' data-i18n="back-home">← Back to Home</a>
 <h2 data-i18n="factory-title">Factory Strength</h2>
 <p style="color:#5a5a7a;font-size:.85rem;margin-bottom:14px" data-i18n="factory-sub">Advanced manufacturing base with 3 automated production lines, 16,000 sqm workshop, and rigorous quality control.</p>
 <div class="row2">
@@ -788,7 +793,7 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 
 <!-- FRP RODS -->
 <div class="page" id="pg-frp-rods">
-<a class="btn-back" onclick='go("home")'>← Back to Home</a>
+<a class="btn-back" onclick='go("home")' data-i18n="back-home">← Back to Home</a>
 <h2>FRP Anchor Rod Products</h2>
 <p style="color:#5a5a7a;font-size:.85rem;margin-bottom:14px">Glass Fiber Reinforced Polymer anchor rods for mining, tunneling and construction applications.</p>
 <div class="row2">
@@ -825,9 +830,9 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
 <!-- CONTACT -->
 
 <div class="page" id="pg-contact">
-<a class="btn-back" onclick='go("home")'>← Back to Home</a>
+<a class="btn-back" onclick='go("home")' data-i18n="back-home">← Back to Home</a>
 <h2 data-i18n="contact-title">Contact Us</h2>
-<p style="color:#5a5a7a;font-size:.85rem;margin-bottom:18px">Reply within 24 hours — reach out today for a quote or free sample</p>
+<p style="color:#5a5a7a;font-size:.85rem;margin-bottom:18px" data-i18n="contact-hint">Reply within 24 hours — reach out today for a quote or free sample</p>
 <div class="con-grid">
 <div class="con-card"><div class="ico">📧</div><div class="lbl">Email</div><div class="val"><a href="mailto:info@hbjj-anchor.com">info@hbjj-anchor.com</a></div></div>
 <div class="con-card"><div class="ico">💬</div><div class="lbl">WhatsApp</div><div class="val"><a href="https://wa.me/8617729903561" target="_blank" rel="noopener">+86 177 2990 3561</a></div></div>
@@ -854,11 +859,11 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
   <textarea name="message" placeholder="Tell us your requirements" data-i18n="contact-form-message" — product type, quantity, destination port..." required></textarea>
   <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
   <input type="hidden" name="_subject" value="New Inquiry from hbjj-anchor.com">
-   ✉</button>
-  <p class="note">We reply within 24 hours. Your information stays confidential.</p>
+   <button type="submit" class="submit-btn" data-i18n="contact-form-submit">✉</button>
+  <p class="note" data-i18n="contact-form-note">We reply within 24 hours. Your information stays confidential.</p>
 </form>
 </div>
-<p style="text-align:center;margin-top:24px;font-size:1rem;font-weight:600;color:#0f1b2d">🤝 We look forward to partnering with you!</p>
+<p style="text-align:center;margin-top:24px;font-size:1rem;font-weight:600;color:#0f1b2d" data-i18n="contact-footer-text">🤝 We look forward to partnering with you!</p>
 </div>
 
 
@@ -871,7 +876,7 @@ footer .trust-icons{margin:10px 0;font-size:1.8rem;opacity:.6}
   · <a href="https://wa.me/8617729903561" target="_blank" rel="noopener">WhatsApp</a>
   · <a href="mailto:info@hbjj-anchor.com">Email</a>
 </p>
-<p class="visitor-counter">🌐 <span id="visit-label">Visitors:</span> <span id="visit-count">0</span></p>
+<p class="visitor-counter">🌐 <span id="visit-label" data-i18n="footer-visitors">Visitors:</span> <span id="visit-count">0</span></p>
 </footer>
 <script>
 function go(name){
@@ -913,164 +918,187 @@ window.addEventListener("DOMContentLoaded",function(){
 
 // ===== MULTILINGUAL ENGINE =====
 var LANG_DATA = {
-  "nav-home":{"en":"Home","zh":"首页"},
-  "nav-about":{"en":"About","zh":"关于我们"},
-  "nav-products":{"en":"Products","zh":"产品中心"},
-  "nav-gallery":{"en":"Gallery","zh":"工厂实拍"},
-  "nav-tech":{"en":"Tech","zh":"技术资料"},
-  "nav-certs":{"en":"Certificates","zh":"资质证书"},
-  "nav-order":{"en":"Order","zh":"订购流程"},
-  "nav-contact":{"en":"Contact","zh":"联系我们"},
-  
-  "nav-factory-strength":{"en":"Factory Strength","zh":"厂家实力"},
-  "nav-frp-rods":{"en":"FRP Rods","zh":"玻璃钢锚杆"},"card-frp-more":{"en":"View Details","zh":"查看详情"},"card-frp-title":{"en":"FRP Anchor Rods","zh":"玻璃钢锚杆"},"card-frp-desc":{"en":"Glass fiber reinforced polymer rods. MA safety certified.","zh":"玻璃钢锚杆·MA安标认证"},
-  "card-factory-more":{"en":"Explore Factory","zh":"了解工厂"},
-  "":{"en":"View Export Map","zh":"出口地图"},
-  "factory-title":{"en":"Factory Strength","zh":"厂家实力"},
-  "factory-sub":{"en":"Advanced manufacturing base with 3 automated production lines, 16,000 sqm workshop, and rigorous quality control.","zh":"拥有3条自动化生产线、16000㎡车间和严格质检的先进制造基地。"},
-  "factory-capacity-title":{"en":"Production Lines","zh":"生产线"},
-  "factory-rd-title":{"en":"R&D & Quality Control","zh":"研发与质检"},
-  "factory-rd-desc":{"en":"Dedicated R&D team with advanced testing equipment ensures every batch meets international standards before shipment.","zh":"专业研发团队+先进检测设备，确保每批产品出厂前符合国际标准。"},
-  "factory-tour-title":{"en":"Factory Facilities","zh":"厂区设施"},
-  "":{"en":"Global Export","zh":"全球出口"},
-  "":{"en":"Jinjiu products are exported to over 30 countries worldwide, trusted by mining and construction companies across continents.","zh":"金久产品出口全球30多个国家，深受各大洲矿山和建筑企业信赖。"},
-  "":{"en":"Export Destinations","zh":"出口目的地"},
-  "":{"en":"Export Photos","zh":"出口实拍"},"nav-logo-text":{"en":"ANCHOR RESIN","zh":"锚固剂厂家"},
-  "card-about-more":{"en":"Learn More","zh":"了解更多"},
-  "card-products-more":{"en":"View Products","zh":"查看产品"},
-  "card-gallery-more":{"en":"View Gallery","zh":"查看图册"},
-  "card-tech-more":{"en":"View Docs","zh":"查看资料"},
-  "card-certs-more":{"en":"View Certificates","zh":"查看证书"},
-  "card-order-more":{"en":"View Process","zh":"查看流程"},
-  "card-contact-more":{"en":"Get in Touch","zh":"联系我们"},
-  "about-more":{"en":"Learn More","zh":"了解更多"},
-
-  "hero-title":{"en":"Professional Resin Anchor Capsule Manufacturer","zh":"专业树脂锚固剂生产厂家"},
-  "hero-sub":{"en":"Trusted by mining & construction companies worldwide since 2004. ISO 9001, MA, SGS certified factory. Exporting to 30+ countries.","zh":"2004年建厂 · ISO 9001/MA/SGS认证 · 出口30多国 · 全球矿山和建筑行业信赖的锚固剂供应商。"},
-  "hero-cta":{"en":"📩 Send Inquiry","zh":"📩 发送询盘"},
-  "hero-whatsapp":{"en":"💬 WhatsApp: +86 177 2990 3561","zh":"💬  WhatsApp: +86 177 2990 3561"},
-  "card-about-title":{"en":"About Jinjiu","zh":"关于金久"},
-  "card-about-desc":{"en":"20+ years, 16,000 sqm factory, 3 auto lines.","zh":"20年+ · 16000㎡ · 3条自动线"},
-  "card-products-title":{"en":"Products","zh":"产品中心"},
-  "card-products-desc":{"en":"Resin capsules, epoxy, MG resin, FRP rods.","zh":"树脂锚固剂/环氧/MG树脂/FRP锚杆"},
-  "card-gallery-title":{"en":"Factory Gallery","zh":"工厂实拍"},
-  "card-gallery-desc":{"en":"Real photos — production, packaging, export.","zh":"生产线·包装·装柜·出口实拍"},
-  "card-tech-title":{"en":"Technical Docs","zh":"技术资料"},
-  "card-tech-desc":{"en":"Specs, test methods, classification, guides.","zh":"技术指标·检测方法·分类·说明"},
-  "card-certs-title":{"en":"Certificates","zh":"资质证书"},
-  "card-certs-desc":{"en":"Patent, reports, ISO 9001/14001/45001, MA.","zh":"专利·报告·ISO体系·煤安认证"},
-  "card-order-title":{"en":"How to Order","zh":"订购流程"},
-  "card-order-desc":{"en":"8-step: inquiry → quote → sample → shipment.","zh":"8步流程：询盘→报价→样品→发货"},
-  
-  "card-factory-title":{"en":"Factory Strength","zh":"厂家实力"},
-  "card-factory-desc":{"en":"16,000 sqm facility, automated lines, R&D, QC.","zh":"16000㎡·自动线·研发·质检"},
-  "card-":{"en":"Global Export","zh":"全球出口"},
-  "card-export-desc":{"en":"Export to 30+ countries worldwide.","zh":"出口全球30+国家"},"card-contact-title":{"en":"Contact Us","zh":"联系我们"},
-  "card-contact-desc":{"en":"FRP rods, resin capsules. Email, WhatsApp, Alibaba.","zh":"玻璃钢锚杆·树脂锚固剂·邮件·WhatsApp·24h回复"},
-  "back-home":{"en":"← Back to Home","zh":"← 返回首页"},
-  "back-products":{"en":"← Back to Products","zh":"← 返回产品"},
-  "about-title":{"en":"About Huaibei Jinjiu New Materials Co., Ltd.","zh":"关于淮北金久新材料有限公司"},
-  "about-p1":{"en":"Founded in **2004**, Jinjiu specializes in resin anchoring agents, FRP anchor rods, MG resin and mining support materials.","zh":"淮北金久新材料有限公司成立于**2004年**，专业生产树脂锚固剂、FRP锚杆、MG树脂及矿山支护材料。"},
-  "about-p2":{"en":"**16,000+ sqm** factory, **3 auto lines**, **100+ employees**. Export to **30+ countries**: Russia, Turkey, Indonesia, South Africa, Chile, Vietnam, Peru, Poland, Brazil.","zh":"**16000+㎡**工厂·**3条自动线**·**100+员工**·出口**30+国家**：俄罗斯、土耳其、印尼、南非、智利、越南等。"},
-  "about-p3":{"en":"Products used in coal mine bolting, tunnel support, slope stabilization, foundation anchoring worldwide.","zh":"产品广泛应用于煤矿巷道支护、隧道工程、边坡加固、基础锚固等国内外项目。"},
-  "about-capacity":{"en":"Production Capacity","zh":"生产能力"},
-  "about-tour":{"en":"Factory Tour","zh":"工厂参观"},
-  "about-video1-label":{"en":"Automatic Production Line","zh":"锚固剂自动化生产线"},
-  "about-video2-label":{"en":"Φ23×600mm Anchor Production","zh":"Φ23×600mm 锚固剂生产"},
-  "products-title":{"en":"Products","zh":"产品中心"},
-  "products-hint":{"en":"Click any product for details.","zh":"点击产品查看详情。"},
-  "prod-click":{"en":"Click for details →","zh":"点击查看详情 →"},
-  "prod-resin-capsule":{"en":"Resin Anchor Capsule","zh":"树脂锚固剂"},
-  "prod-epoxy":{"en":"Epoxy Adhesive","zh":"环氧树脂锚固胶"},
-  "prod-mg-resin":{"en":"MG Resin","zh":"不饱和聚酯树脂"},
-  "prod-frp-rod":{"en":"FRP Anchor Rod System","zh":"玻璃钢锚杆系统"},
-  "gallery-title":{"en":"Factory & Product Gallery","zh":"工厂与产品实拍"},
-  "gallery-hint":{"en":"Click image to view full size","zh":"点击图片查看大图"},
-  "tech-title":{"en":"Technical Documents","zh":"技术资料"},
-  "tech-hint":{"en":"Click image to view full size","zh":"点击图片查看大图"},
-  "certs-title":{"en":"Certificates & Quality Assurance","zh":"资质证书与质量保证"},
-  "certs-hint":{"en":"Our commitment to quality — international certifications","zh":"我们对质量的承诺——国际认证与第三方检测"},
-  "certs-standard":{"en":"Certifications & Standards","zh":"认证与标准"},
-  "certs-note":{"en":"ISO 9001 quality system. SGS inspection available.","zh":"ISO 9001质量体系·可安排SGS检测。"},
-  "order-title":{"en":"How to Order","zh":"订购流程"},
-  "order-hint":{"en":"8-step process from inquiry to delivery","zh":"8步流程：从询盘到交货"},
-  "order-step1-title":{"en":"Inquiry","zh":"询盘"},
-  "order-step1-desc":{"en":"Send specs + quantity + port. Reply 24h.","zh":"发送规格+数量+目的港·24h回复"},
-  "order-step2-title":{"en":"Quotation","zh":"报价"},
-  "order-step2-desc":{"en":"FOB/CIF quote with lead time.","zh":"FOB/CIF报价含交期"},
-  "order-step3-title":{"en":"Free Samples","zh":"免费样品"},
-  "order-step3-desc":{"en":"50-200 pcs free. Shipping refunded.","zh":"50-200支免费·运费返还"},
-  "order-step4-title":{"en":"Confirm","zh":"确认"},
-  "order-step4-desc":{"en":"PI issued. 30% T/T deposit.","zh":"形式发票·30%定金"},
-  "order-step5-title":{"en":"Production","zh":"生产"},
-  "order-step5-desc":{"en":"15-20 days. Progress photos via WhatsApp.","zh":"15-20天·WhatsApp进度照片"},
-  "order-step6-title":{"en":"Inspection","zh":"质检"},
-  "order-step6-desc":{"en":"QC + optional SGS inspection.","zh":"内部质检+可选SGS检测"},
-  "order-step7-title":{"en":"Shipment","zh":"发货"},
-  "order-step7-desc":{"en":"Loading photos + full docs (CO,CI,PL,BL).","zh":"装柜照片+全套单证"},
-  "order-step8-title":{"en":"After-Sales","zh":"售后"},
-  "order-step8-desc":{"en":"24/7 WhatsApp + re-order support.","zh":"7x24h WhatsApp+复购支持"},
-  "order-payment":{"en":"💳 Payment Terms","zh":"💳 付款方式"},
-  "order-payment-desc":{"en":"T/T: 30% deposit + 70% before shipment. L/C >$50K.","zh":"T/T 30%定金+70%发货前·$50K以上可L/C"},
-  "order-moq":{"en":"📦 Minimum Order Quantity","zh":"📦 最小起订量"},
-  "order-moq-desc":{"en":"Trial: 5,000 pcs. Regular: 10,000 pcs.","zh":"试单5000支·常规10000支·可协商"},
-  "order-shipping":{"en":"🌍 Shipping & Delivery","zh":"🌍 运输与交货"},
-  "order-shipping-desc":{"en":"FOB Shanghai/Qingdao or CIF. FCL preferred, LCL available.","zh":"FOB上海/青岛或CIF·整柜优先·试单可拼柜"},
-  "contact-title":{"en":"Contact Us","zh":"联系我们"},
-  "contact-hint":{"en":"Reply within 24 hours — quote or free sample","zh":"24小时内回复——获取报价或免费样品"},
-  "contact-form-title":{"en":"📩 Quick Inquiry","zh":"📩 快速询盘"},
-  "contact-form-name":{"en":"Your Name *","zh":"您的姓名 *"},
-  "contact-form-email":{"en":"Your Email *","zh":"您的邮箱 *"},
-  "contact-form-company":{"en":"Company Name","zh":"公司名称"},
-  "contact-form-phone":{"en":"WhatsApp / Phone","zh":"WhatsApp / 电话"},
-  "contact-form-message":{"en":"Tell us your requirements...","zh":"请告知您的需求..."},
-  "contact-form-submit":{"en":"Send Inquiry ✉","zh":"发送询盘 ✉"},
-  "contact-form-note":{"en":"We reply within 24h. Confidential.","zh":"24h内回复·信息保密。"},
-  "contact-footer-text":{"en":"🤝 We look forward to partnering with you!","zh":"🤝 期待与您合作！"},
-  "footer-text":{"en":"© 2004–2025 Huaibei Jinjiu New Materials Co., Ltd. | Professional Resin Anchor Capsule Manufacturer","zh":"© 2004–2025 淮北金久新材料有限公司 | 专业树脂锚固剂生产厂家"},
-  "footer-addr":{"en":"West Nvzhen Rd., Suixi Economic Dev. Zone, Huaibei, Anhui, China · ISO 9001:2015","zh":"安徽省淮北市濉溪经济开发区女贞西路 · ISO 9001:2015"},
-  "footer-visitors":{"en":"Visitors","zh":"访客数"},
-  "tech-intro":{"en":"Jinjiu runs an in-house R&D and testing center with pull-out test rigs, gel-time meters and thermostatic curing chambers. Every batch of anchoring agent is fully inspected before leaving the factory.","zh":"金久新材料设有自主研发与检测中心，配备拉拔试验机、凝胶时间测定仪与恒温养护箱，每批锚固剂出厂前均全检。"},
-  "tech-spec-title":{"en":"Resin Anchor Capsule Series — Typical Parameters","zh":"树脂锚固剂系列 — 典型参数"},
-  "tech-spec-cap":{"en":"Reference values for typical grades; fully customizable to your ground condition.","zh":"以下为典型牌号参考值，可按您的地层工况定制。"},
-  "tech-th-grade":{"en":"Grade","zh":"牌号"},
-  "tech-th-cure":{"en":"Set / Cure","zh":"凝胶/固化"},
-  "tech-th-temp":{"en":"Service Temp","zh":"适用温度"},
-  "tech-th-use":{"en":"Typical Use","zh":"典型用途"},
-  "tech-std-title":{"en":"Standards We Test To","zh":"执行与检测标准"},
-  "tech-std-desc":{"en":"Resin anchor rods: MT/T 1061 · Mine anchor cables: MT/T 942 · Batch inspection & ISO 9001 quality control.","zh":"树脂锚杆：MT/T 1061 · 矿用锚索：MT/T 942 · 逐批检测并按 ISO 9001 质控。"},
-  "tech-proc-title":{"en":"Standard Installation — 5 Steps","zh":"标准施工工艺（5 步）"},
-  "tech-proc-1":{"en":"① Drill: bore to design diameter & depth","zh":"① 钻孔：按设计直径与深度成孔"},
-  "tech-proc-2":{"en":"② Clean: blow / flush dust out of the hole","zh":"② 清孔：高压风/水清除孔内粉尘"},
-  "tech-proc-3":{"en":"③ Load: push the resin capsule to hole bottom","zh":"③ 装填：将树脂胶囊推至孔底"},
-  "tech-proc-4":{"en":"④ Mix: rotate rod to break & stir the capsule","zh":"④ 搅拌：锚杆连接钻机旋转破碎并搅拌胶囊"},
-  "tech-proc-5":{"en":"⑤ Cure: rest until cure age, then load","zh":"⑤ 养护：静置至龄期后承载"},
+  "nav-home":{"en":"Home","zh":"首页","ru":"Главная","tr":"Ana Sayfa"},
+  "nav-about":{"en":"About","zh":"关于我们","ru":"О компании","tr":"Hakkımızda"},
+  "nav-products":{"en":"Products","zh":"产品中心","ru":"Продукция","tr":"Ürünler"},
+  "nav-gallery":{"en":"Gallery","zh":"工厂实拍","ru":"Галерея","tr":"Galeri"},
+  "nav-tech":{"en":"Tech","zh":"技术资料","ru":"Техдокументация","tr":"Teknik"},
+  "nav-certs":{"en":"Certificates","zh":"资质证书","ru":"Сертификаты","tr":"Sertifikalar"},
+  "nav-order":{"en":"Order","zh":"订购流程","ru":"Заказ","tr":"Sipariş"},
+  "nav-contact":{"en":"Contact","zh":"联系我们","ru":"Контакты","tr":"İletişim"},
+  "nav-factory-strength":{"en":"Factory Strength","zh":"厂家实力","ru":"Мощь завода","tr":"Fabrika Gücü"},
+  "nav-frp-rods":{"en":"FRP Rods","zh":"玻璃钢锚杆","ru":"Стержни FRP","tr":"FRP Çubukları"},
+  "card-frp-more":{"en":"View Details","zh":"查看详情","ru":"Подробнее","tr":"Detayları Gör"},
+  "card-frp-title":{"en":"FRP Anchor Rods","zh":"玻璃钢锚杆","ru":"Анкерные стержни FRP","tr":"FRP Ankraj Çubukları"},
+  "card-frp-desc":{"en":"Glass fiber reinforced polymer rods. MA safety certified.","zh":"玻璃钢锚杆·MA安标认证","ru":"Стержни из стеклопластика — полные спецификации, области применения, сертификат безопасности MA.","tr":"Cam elyaf takviyeli polimer çubuklar — tam teknik özellikler, uygulama alanları, MA güvenlik sertifikalı."},
+  "card-factory-more":{"en":"Explore Factory","zh":"了解工厂","ru":"Осмотр завода","tr":"Fabrikayı Keşfedin"},
+  "factory-title":{"en":"Factory Strength","zh":"厂家实力","ru":"Мощь завода","tr":"Fabrika Gücü"},
+  "factory-sub":{"en":"Advanced manufacturing base with 3 automated production lines, 16,000 sqm workshop, and rigorous quality control.","zh":"拥有3条自动化生产线、16000㎡车间和严格质检的先进制造基地。","ru":"Передовая производственная база: 3 автоматические линии, цех 16 000 м² и строгий контроль качества.","tr":"3 otomatik üretim hattı, 16.000 m² atölye ve sıkı kalite kontrole sahip gelişmiş üretim üssü."},
+  "factory-capacity-title":{"en":"Production Lines","zh":"生产线","ru":"Производственные линии","tr":"Üretim Hatları"},
+  "factory-rd-title":{"en":"R&D & Quality Control","zh":"研发与质检","ru":"НИОКР и контроль качества","tr":"Ar-Ge ve Kalite Kontrol"},
+  "factory-rd-desc":{"en":"Dedicated R&D team with advanced testing equipment ensures every batch meets international standards before shipment.","zh":"专业研发团队+先进检测设备，确保每批产品出厂前符合国际标准。","ru":"Выделенная команда НИОКР с современным испытательным оборудованием гарантирует, что каждая партия соответствует международным стандартам до отгрузки.","tr":"Gelişmiş test ekipmanlarına sahip özel Ar-Ge ekibi, her partinin sevkiyattan önce uluslararası standartlara uygun olmasını sağlar."},
+  "factory-tour-title":{"en":"Factory Facilities","zh":"厂区设施","ru":"Заводские объекты","tr":"Fabrika Tesisleri"},
+  "nav-logo-text":{"en":"ANCHOR RESIN","zh":"锚固剂厂家","ru":"АНКЕРНАЯ СМОЛА","tr":"ANKRAJ REÇİNESİ"},
+  "card-about-more":{"en":"Learn More","zh":"了解更多","ru":"Подробнее","tr":"Daha Fazla"},
+  "card-products-more":{"en":"View Products","zh":"查看产品","ru":"Смотреть продукцию","tr":"Ürünleri Gör"},
+  "card-gallery-more":{"en":"View Gallery","zh":"查看图册","ru":"Смотреть галерею","tr":"Galeriyi Gör"},
+  "card-tech-more":{"en":"View Docs","zh":"查看资料","ru":"Документы","tr":"Dokümanlar"},
+  "card-certs-more":{"en":"View Certificates","zh":"查看证书","ru":"Сертификаты","tr":"Sertifikaları Gör"},
+  "card-order-more":{"en":"View Process","zh":"查看流程","ru":"Процесс","tr":"Süreci Gör"},
+  "card-contact-more":{"en":"Get in Touch","zh":"联系我们","ru":"Связаться","tr":"İletişime Geçin"},
+  "about-more":{"en":"Learn More","zh":"了解更多","ru":"Подробнее","tr":"Daha Fazla"},
+  "hero-title":{"en":"Professional Resin Anchor Capsule Manufacturer","zh":"专业树脂锚固剂生产厂家","ru":"Профессиональный производитель смоляных анкерных капсул","tr":"Profesyonel Reçine Ankraj Kapsülü Üreticisi"},
+  "hero-sub":{"en":"Trusted by mining & construction companies worldwide since 2004. ISO 9001, MA, SGS certified factory. Exporting to 30+ countries.","zh":"2004年建厂 · ISO 9001/MA/SGS认证 · 出口30多国 · 全球矿山和建筑行业信赖的锚固剂供应商。","ru":"Нам доверяют горнодобывающие и строительные компании по всему миру с 2004 года. Завод сертифицирован по ISO 9001, MA, SGS. Экспорт в 30+ стран.","tr":"2004'ten beri dünya çapında madencilik ve inşaat şirketlerinin güvendiği marka. ISO 9001, MA, SGS sertifikalı fabrika. 30+ ülkeye ihracat."},
+  "hero-cta":{"en":"📩 Send Inquiry","zh":"📩 发送询盘","ru":"📩 Отправить запрос","tr":"📩 Teklif İste"},
+  "hero-whatsapp":{"en":"💬 WhatsApp: +86 177 2990 3561","zh":"💬  WhatsApp: +86 177 2990 3561","ru":"💬 WhatsApp: +86 177 2990 3561","tr":"💬 WhatsApp: +86 177 2990 3561"},
+  "card-about-title":{"en":"About Jinjiu","zh":"关于金久","ru":"О компании Jinjiu","tr":"Jinjiu Hakkında"},
+  "card-about-desc":{"en":"20+ years, 16,000 sqm factory, 3 auto lines.","zh":"20年+ · 16000㎡ · 3条自动线","ru":"20+ лет, завод 16 000 м², 3 автоматические линии. Обслуживание горной и строительной отраслей по всему миру.","tr":"20+ yıl, 16.000 m² fabrika, 3 otomatik hat. Dünya çapında madencilik ve inşaat."},
+  "card-products-title":{"en":"Products","zh":"产品中心","ru":"Продукция","tr":"Ürünler"},
+  "card-products-desc":{"en":"Resin capsules, epoxy, MG resin, FRP rods.","zh":"树脂锚固剂/环氧/MG树脂/FRP锚杆","ru":"Смоляные капсулы, эпоксид, смола MG, стержни FRP. Полные спецификации и техданные со страницами деталей.","tr":"Reçine kapsülleri, epoksi, MG reçine, FRP çubuklar. Detaylı tüm teknik veriler."},
+  "card-gallery-title":{"en":"Factory Gallery","zh":"工厂实拍","ru":"Галерея завода","tr":"Fabrika Galerisi"},
+  "card-gallery-desc":{"en":"Real photos — production, packaging, export.","zh":"生产线·包装·装柜·出口实拍","ru":"Реальные фото — линии производства, упаковка, погрузка, экспорт в Турцию, Россию и др.","tr":"Gerçek fotoğraflar — üretim hatları, paketleme, yükleme, Türkiye ve Rusya'ya ihracat."},
+  "card-tech-title":{"en":"Technical Docs","zh":"技术资料","ru":"Техническая документация","tr":"Teknik Dokümanlar"},
+  "card-tech-desc":{"en":"Specs, test methods, classification, guides.","zh":"技术指标·检测方法·分类·说明","ru":"Характеристики, методы испытаний, классификация продукции, руководство по наименованиям и эксплуатационные термины.","tr":"Özellikler, test yöntemleri, ürün sınıflandırması, adlandırma kılavuzu ve performans terimleri."},
+  "card-certs-title":{"en":"Certificates","zh":"资质证书","ru":"Сертификаты","tr":"Sertifikalar"},
+  "card-certs-desc":{"en":"Patent, reports, ISO 9001/14001/45001, MA.","zh":"专利·报告·ISO体系·煤安认证","ru":"Патент, отчёты по испытаниям, гарантия качества, сертификаты ISO 9001/14001/45001, MA.","tr":"Patent, raporlar, kalite garantisi, ISO 9001/14001/45001, MA sertifikaları."},
+  "card-order-title":{"en":"How to Order","zh":"订购流程","ru":"Как заказать","tr":"Nasıl Sipariş Verilir"},
+  "card-order-desc":{"en":"8-step: inquiry → quote → sample → shipment.","zh":"8步流程：询盘→报价→样品→发货","ru":"8-шаговый процесс: запрос → расчёт → образец → производство → контроль → отгрузка.","tr":"8 adımlık süreç: sorgu → teklif → numune → üretim → denetim → sevkiyat."},
+  "card-factory-title":{"en":"Factory Strength","zh":"厂家实力","ru":"Мощь завода","tr":"Fabrika Gücü"},
+  "card-factory-desc":{"en":"16,000 sqm facility, automated lines, R&D, QC.","zh":"16000㎡·自动线·研发·质检","ru":"Площадь 16 000 м², автоматические линии, лаборатория НИОКР, строгий контроль качества — производственная мощь Jinjiu.","tr":"16.000 m² tesis, otomatik hatlar, Ar-Ge laboratuvarı, sıkı kalite kontrol — Jinjiu'nun üretim gücü."},
+  "card-export-desc":{"en":"Export to 30+ countries worldwide.","zh":"出口全球30+国家","ru":"Экспорт в 30+ стран мира.","tr":"Dünya çapında 30+ ülkeye ihracat."},
+  "card-contact-title":{"en":"Contact Us","zh":"联系我们","ru":"Связаться с нами","tr":"İletişim"},
+  "card-contact-desc":{"en":"FRP rods, resin capsules. Email, WhatsApp, Alibaba.","zh":"玻璃钢锚杆·树脂锚固剂·邮件·WhatsApp·24h回复","ru":"Эл. почта, WhatsApp, магазин Alibaba. Ответ в течение 24 часов. Бесплатные образцы.","tr":"E-posta, WhatsApp, Alibaba Mağazası. 24 saat içinde yanıt. Ücretsiz numuneler."},
+  "back-home":{"en":"← Back to Home","zh":"← 返回首页","ru":"← На главную","tr":"← Ana Sayfaya Dön"},
+  "back-products":{"en":"← Back to Products","zh":"← 返回产品","ru":"← К продукции","tr":"← Ürünlere Dön"},
+  "about-title":{"en":"About Huaibei Jinjiu New Materials Co., Ltd.","zh":"关于淮北金久新材料有限公司","ru":"О компании «Хуайбэй Цзиньцзю Новые Материалы», ООО","tr":"Huaibei Jinjiu Yeni Malzemeler Ltd. Şti. Hakkında"},
+  "about-p1":{"en":"Founded in **2004**, Jinjiu specializes in resin anchoring agents, FRP anchor rods, MG resin and mining support materials.","zh":"淮北金久新材料有限公司成立于**2004年**，专业生产树脂锚固剂、FRP锚杆、MG树脂及矿山支护材料。","ru":"Основана в **2004** году, компания Huaibei Jinjiu New Materials Co., Ltd. — профессиональный производитель смоляных анкеров, анкерных стержней FRP, смолы MG и материалов крепления горных выработок, расположенный в провинции Аньхой, Китай.","tr":"**2004** yılında kurulan Huaibei Jinjiu Yeni Malzemeler Ltd. Şti., reçine ankraj maddeleri, FRP ankraj çubukları, MG reçinesi ve maden destek malzemeleri üreticisidir; Çin'in Anhui eyaletinde yer almaktadır."},
+  "about-p2":{"en":"With a **16,000+ sqm** factory, **3 fully automated production lines**, and over **100 employees**, we serve mining, tunneling and construction clients across **30+ countries** including Russia, Turkey, Indonesia, South Africa, Chile, Vietnam, Peru, Poland, and Brazil.","zh":"**16000+㎡**工厂·**3条自动线**·**100+员工**·出口**30+国家**：俄罗斯、土耳其、印尼、南非、智利、越南等。","ru":"На нашем заводе площадью **16 000+ м²** работают **3 полностью автоматизированные производственные линии** и более **100 сотрудников**; мы обслуживаем клиентов в горной, тоннельной и строительной отраслях в **30+ странах**, включая Россию, Турцию, Индонезию, ЮАР, Чили, Вьетнам, Перу, Польшу и Бразилию.","tr":"**16.000+ m²** fabrika alanımızda, **3 tam otomatik üretim hattı** ve **100+ çalışanımızla**; madencilik, tünel ve inşaat sektörlerine **30+ ülkede** (Rusya, Türkiye, Endonezya, Güney Afrika, Şili, Vietnam, Peru, Polonya ve Brezilya dâhil) hizmet veriyoruz."},
+  "about-p3":{"en":"Our products are used in coal mine roadway bolting, tunnel support, slope stabilization, foundation anchoring, and civil engineering projects worldwide.","zh":"产品广泛应用于煤矿巷道支护、隧道工程、边坡加固、基础锚固等国内外项目。","ru":"Наша продукция применяется при креплении угольных штреков, поддержке тоннелей, стабилизации откосов, анкеровании фундаментов и в гражданских инженерных проектах по всему миру.","tr":"Ürünlerimiz dünya çapında kömür madeni galeri boltlamasında, tünel desteğinde, şev stabilizasyonunda, temel ankrajında ve sivil mühendislik projelerinde kullanılmaktadır."},
+  "about-capacity":{"en":"Production Capacity","zh":"生产能力","ru":"Производственная мощность","tr":"Üretim Kapasitesi"},
+  "about-tour":{"en":"Factory Tour","zh":"工厂参观","ru":"Экскурсия по заводу","tr":"Fabrika Turu"},
+  "about-video1-label":{"en":"Automatic Production Line","zh":"锚固剂自动化生产线","ru":"Автоматическая линия производства капсул","tr":"Otomatik Kapsül Üretim Hattı"},
+  "about-video2-label":{"en":"Φ23×600mm Anchor Production","zh":"Φ23×600mm 锚固剂生产","ru":"Производство анкеров Φ23×600 мм","tr":"Φ23×600mm Ankraj Üretimi"},
+  "products-title":{"en":"Products","zh":"产品中心","ru":"Продукция","tr":"Ürünler"},
+  "products-hint":{"en":"Click any product for details.","zh":"点击产品查看详情。","ru":"Нажмите на продукт для подробностей, областей применения и характеристик.","tr":"Detaylar için herhangi bir ürüne tıklayın."},
+  "prod-click":{"en":"Click for details →","zh":"点击查看详情 →","ru":"Подробнее →","tr":"Detaylar için tıklayın →"},
+  "prod-resin-capsule":{"en":"Resin Anchor Capsule","zh":"树脂锚固剂","ru":"Смоляная анкерная капсула","tr":"Reçine Ankraj Kapsülü"},
+  "prod-epoxy":{"en":"Epoxy Adhesive","zh":"环氧树脂锚固胶","ru":"Эпоксидный клей","tr":"Epoksi Yapıştırıcı"},
+  "prod-mg-resin":{"en":"MG Resin","zh":"不饱和聚酯树脂","ru":"Смола MG","tr":"MG Reçinesi"},
+  "prod-frp-rod":{"en":"FRP Anchor Rod System","zh":"玻璃钢锚杆系统","ru":"Система анкерных стержней FRP","tr":"FRP Ankraj Çubuğu Sistemi"},
+  "gallery-title":{"en":"Factory & Product Gallery","zh":"工厂与产品实拍","ru":"Галерея завода и продукции","tr":"Fabrika ve Ürün Galerisi"},
+  "gallery-hint":{"en":"Click any image to view full size — real photos from our factory and exports","zh":"点击图片查看大图","ru":"Нажмите на изображение для увеличения.","tr":"Tam boyut için görsele tıklayın."},
+  "tech-title":{"en":"Technical Documents","zh":"技术资料","ru":"Техническая документация","tr":"Teknik Dokümanlar"},
+  "tech-hint":{"en":"Click any document image to view full size","zh":"点击图片查看大图","ru":"Нажмите на изображение для увеличения.","tr":"Tam boyut için görsele tıklayın."},
+  "certs-title":{"en":"Certificates & Quality Assurance","zh":"资质证书与质量保证","ru":"Сертификаты и гарантия качества","tr":"Sertifikalar ve Kalite Güvencesi"},
+  "certs-hint":{"en":"Click any certificate image to view full size — all certifications are authentic and verifiable.","zh":"我们对质量的承诺——国际认证与第三方检测","ru":"Наши обязательства по качеству — международные сертификаты.","tr":"Kaliteye olan bağlılığımız — uluslararası sertifikalar."},
+  "certs-standard":{"en":"Certifications & Standards","zh":"认证与标准","ru":"Сертификаты и стандарты","tr":"Sertifikalar ve Standartlar"},
+  "certs-note":{"en":"ISO 9001 quality system. SGS inspection available.","zh":"ISO 9001质量体系·可安排SGS检测。","ru":"Система качества ISO 9001. Возможна инспекция SGS.","tr":"ISO 9001 kalite sistemi. SGS denetimi mevcuttur."},
+  "order-title":{"en":"How to Order","zh":"订购流程","ru":"Как заказать","tr":"Nasıl Sipariş Verilir"},
+  "order-hint":{"en":"We make it easy for you — from first inquiry to delivery at your site. No matter where you are in the world.","zh":"8步流程：从询盘到交货","ru":"8-шаговый процесс от запроса до поставки.","tr":"Sorgudan teslimata 8 adımlık süreç."},
+  "order-step1-title":{"en":"Send Us a Message","zh":"询盘","ru":"Запрос","tr":"Sorgu"},
+  "order-step1-desc":{"en":"Tell us what you need — product type, quantity, and destination port. We reply within **24 hours**.","zh":"发送规格+数量+目的港·24h回复","ru":"Отправьте ТУ + количество + порт. Ответ за 24 ч.","tr":"Özellikler + miktar + liman gönderin. 24 saat içinde yanıt."},
+  "order-step2-title":{"en":"Get a Quote","zh":"报价","ru":"Расчёт","tr":"Teklif"},
+  "order-step2-desc":{"en":"We'll send you a detailed **FOB or CIF quotation** with pricing, lead time, and packaging options within 1 business day.","zh":"FOB/CIF报价含交期","ru":"Расчёт FOB/CIF со сроком поставки.","tr":"Teslim süresiyle FOB/CIF teklifi."},
+  "order-step3-title":{"en":"Free Samples","zh":"免费样品","ru":"Бесплатные образцы","tr":"Ücretsiz Numuneler"},
+  "order-step3-desc":{"en":"**50–200 pcs free samples**. You only pay shipping, and we refund it on your first order. Test our quality risk-free.","zh":"50-200支免费·运费返还","ru":"50–200 шт. бесплатно. Доставка возвращается.","tr":"50-200 adet ücretsiz. Kargo iade edilir."},
+  "order-step4-title":{"en":"Confirm & Pay","zh":"确认","ru":"Подтверждение","tr":"Onay"},
+  "order-step4-desc":{"en":"Proforma Invoice issued. **30% T/T deposit** to start production. Balance before shipment. L/C accepted for orders over $50K.","zh":"形式发票·30%定金","ru":"Выставляется PI. Аванс 30% T/T.","tr":"Proforma fatura düzenlenir. %30 T/T kapora."},
+  "order-step5-title":{"en":"Production","zh":"生产","ru":"Производство","tr":"Üretim"},
+  "order-step5-desc":{"en":"**15–20 days** lead time. We send you **weekly progress photos** via WhatsApp so you can see your order being made.","zh":"15-20天·WhatsApp进度照片","ru":"15–20 дней. Фото хода работ в WhatsApp.","tr":"15-20 gün. WhatsApp üzerinden ilerleme fotoğrafları."},
+  "order-step6-title":{"en":"Quality Check","zh":"质检","ru":"Контроль","tr":"Denetim"},
+  "order-step6-desc":{"en":"Internal QC on every batch. **SGS third-party inspection available** upon request. Only quality products leave our factory.","zh":"内部质检+可选SGS检测","ru":"Внутренний КК + опционально SGS.","tr":"Kalite kontrol + isteğe bağlı SGS denetimi."},
+  "order-step7-title":{"en":"Shipment","zh":"发货","ru":"Отгрузка","tr":"Sevkiyat"},
+  "order-step7-desc":{"en":"**FOB Shanghai/Qingdao** or CIF to your port. FCL preferred, LCL available for trials. Full documents: CO, CI, PL, BL.","zh":"装柜照片+全套单证","ru":"Фото погрузки + полный пакет документов (CO, CI, PL, BL).","tr":"Yükleme fotoğrafları + tüm belgeler (CO, CI, PL, BL)."},
+  "order-step8-title":{"en":"After-Sales Support","zh":"售后","ru":"Послепродажное","tr":"Satış Sonrası"},
+  "order-step8-desc":{"en":"**24/7 WhatsApp support**. We follow up on your reorder schedule so you never run out of stock.","zh":"7x24h WhatsApp+复购支持","ru":"WhatsApp 24/7 + поддержка повторного заказа.","tr":"7/24 WhatsApp + yeniden sipariş desteği."},
+  "order-payment":{"en":"💳 Payment Terms","zh":"💳 付款方式","ru":"💳 Условия оплаты","tr":"💳 Ödeme Koşulları"},
+  "order-payment-desc":{"en":"T/T: 30% deposit + 70% before shipment. L/C >$50K.","zh":"T/T 30%定金+70%发货前·$50K以上可L/C","ru":"T/T: 30% аванс + 70% перед отгрузкой. Аккредитив > 50 тыс. $.","tr":"T/T: %30 kapora + %70 sevkiyat öncesi. L/C 50.000 $ üzeri."},
+  "order-moq":{"en":"📦 Minimum Order Quantity","zh":"📦 最小起订量","ru":"📦 Минимальный объём заказа","tr":"📦 Minimum Sipariş Miktarı"},
+  "order-moq-desc":{"en":"Trial: 5,000 pcs. Regular: 10,000 pcs.","zh":"试单5000支·常规10000支·可协商","ru":"Пробный: 5 000 шт. Обычный: 10 000 шт.","tr":"Deneme: 5.000 adet. Standart: 10.000 adet."},
+  "order-shipping":{"en":"🌍 Shipping & Delivery","zh":"🌍 运输与交货","ru":"🌍 Доставка","tr":"🌍 Kargo ve Teslimat"},
+  "order-shipping-desc":{"en":"FOB Shanghai/Qingdao or CIF. FCL preferred, LCL available.","zh":"FOB上海/青岛或CIF·整柜优先·试单可拼柜","ru":"FOB Шанхай/Циндао или CIF. Предпочтителен FCL, возможен LCL.","tr":"FOB Şangay/Qingdao veya CIF. FCL tercih edilir, LCL mümkün."},
+  "contact-title":{"en":"Contact Us","zh":"联系我们","ru":"Связаться с нами","tr":"İletişim"},
+  "contact-hint":{"en":"Reply within 24 hours — reach out today for a quote or free sample","zh":"24小时内回复——获取报价或免费样品","ru":"Ответ в течение 24 часов — расчёт или бесплатный образец.","tr":"24 saat içinde yanıt — teklif veya ücretsiz numune."},
+  "contact-form-title":{"en":"📩 Quick Inquiry","zh":"📩 快速询盘","ru":"📩 Быстрый запрос","tr":"📩 Hızlı Sorgu"},
+  "contact-form-name":{"en":"Your Name *","zh":"您的姓名 *","ru":"Ваше имя *","tr":"Adınız *"},
+  "contact-form-email":{"en":"Your Email *","zh":"您的邮箱 *","ru":"Ваш email *","tr":"E-postanız *"},
+  "contact-form-company":{"en":"Company Name","zh":"公司名称","ru":"Название компании","tr":"Şirket Adı"},
+  "contact-form-phone":{"en":"WhatsApp / Phone","zh":"WhatsApp / 电话","ru":"WhatsApp / Телефон","tr":"WhatsApp / Telefon"},
+  "contact-form-message":{"en":"Tell us your requirements...","zh":"请告知您的需求...","ru":"Опишите ваши требования...","tr":"Gereksinimlerinizi belirtin..."},
+  "contact-form-submit":{"en":"Send Inquiry ✉","zh":"发送询盘 ✉","ru":"Отправить запрос ✉","tr":"Sorgu Gönder ✉"},
+  "contact-form-note":{"en":"We reply within 24h. Confidential.","zh":"24h内回复·信息保密。","ru":"Отвечаем в течение 24 ч. Конфиденциально.","tr":"24 saat içinde yanıt veriyoruz. Gizli."},
+  "contact-footer-text":{"en":"🤝 We look forward to partnering with you!","zh":"🤝 期待与您合作！","ru":"🤝 Ждём сотрудничества с вами!","tr":"🤝 Sizinle ortaklık yapmayı dört gözle bekliyoruz!"},
+  "footer-text":{"en":"© 2004–2025 Huaibei Jinjiu New Materials Co., Ltd. | Professional Resin Anchor Capsule Manufacturer","zh":"© 2004–2025 淮北金久新材料有限公司 | 专业树脂锚固剂生产厂家","ru":"© 2004–2025 ООО «Хуайбэй Цзиньцзю Новые Материалы» | Профессиональный производитель смоляных анкерных капсул","tr":"© 2004–2025 Huaibei Jinjiu Yeni Malzemeler Ltd. Şti. | Profesyonel Reçine Ankraj Kapsülü Üreticisi"},
+  "footer-addr":{"en":"West Nvzhen Rd., Suixi Economic Dev. Zone, Huaibei, Anhui, China · ISO 9001:2015","zh":"安徽省淮北市濉溪经济开发区女贞西路 · ISO 9001:2015","ru":"ул. Зап. Нюйчжэнь, зона экон. развития Суйси, г. Хуайбэй, пров. Аньхой, Китай · ISO 9001:2015","tr":"Çin, Anhui, Huaibei, Suixi Ekonomik Kalkınma Bölgesi, Nvzhen Batı Yolu · ISO 9001:2015"},
+  "footer-visitors":{"en":"Visitors","zh":"访客数","ru":"Посетители","tr":"Ziyaretçiler"},
+  "tech-intro":{"en":"Jinjiu runs an in-house R&D and testing center with pull-out test rigs, gel-time meters and thermostatic curing chambers. Every batch of anchoring agent is fully inspected before leaving the factory.","zh":"金久新材料设有自主研发与检测中心，配备拉拔试验机、凝胶时间测定仪与恒温养护箱，每批锚固剂出厂前均全检。","ru":"Jinjiu располагает собственным центром НИОКР и испытаний с установками вырыва, приборами времени гелеобразования и термостатическими камерами отверждения. Каждая партия анкерующей смолы проходит полную проверку перед отправкой с завода.","tr":"Jinjiu, çekme test tezgâhları, jel zamanı ölçerleri ve termostatik kür odalarıyla kendi bünyesinde Ar-Ge ve test merkezine sahiptir. Her parti ankraj maddesi fabrikadan çıkmadan önce tam olarak denetlenir."},
+  "tech-spec-title":{"en":"Resin Anchor Capsule Series — Typical Parameters","zh":"树脂锚固剂系列 — 典型参数","ru":"Серия смоляных анкерных капсул — типичные параметры","tr":"Reçine Ankraj Kapsülü Serisi — Tipik Parametreler"},
+  "tech-spec-cap":{"en":"Reference values for typical grades; fully customizable to your ground condition.","zh":"以下为典型牌号参考值，可按您的地层工况定制。","ru":"Справочные значения для типичных марок; полная настройка под ваши горно-геологические условия.","tr":"Tipik sınıflar için referans değerleri; zemin koşullarınıza göre tamamen özelleştirilebilir."},
+  "tech-th-grade":{"en":"Grade","zh":"牌号","ru":"Марка","tr":"Sınıf"},
+  "tech-th-cure":{"en":"Set / Cure","zh":"凝胶/固化","ru":"Гелеобразование / Отверждение","tr":"Kinetik / Kür"},
+  "tech-th-temp":{"en":"Service Temp","zh":"适用温度","ru":"Рабочая темп.","tr":"Çalışma Sıcaklığı"},
+  "tech-th-use":{"en":"Typical Use","zh":"典型用途","ru":"Применение","tr":"Tipik Kullanım"},
+  "tech-std-title":{"en":"Standards We Test To","zh":"执行与检测标准","ru":"Стандарты, по которым мы испытываем","tr":"Test Edilen Standartlar"},
+  "tech-std-desc":{"en":"Resin anchor rods: MT/T 1061 · Mine anchor cables: MT/T 942 · Batch inspection & ISO 9001 quality control.","zh":"树脂锚杆：MT/T 1061 · 矿用锚索：MT/T 942 · 逐批检测并按 ISO 9001 质控。","ru":"Анкерные стержни из смолы: MT/T 1061 · Шахтные анкерные канаты: MT/T 942 · Поштучный контроль и управление качеством ISO 9001.","tr":"Reçine ankraj çubukları: MT/T 1061 · Maden ankraj halatları: MT/T 942 · Parti denetimi ve ISO 9001 kalite kontrolü."},
+  "tech-proc-title":{"en":"Standard Installation — 5 Steps","zh":"标准施工工艺（5 步）","ru":"Стандартный монтаж — 5 шагов","tr":"Standart Montaj — 5 Adım"},
+  "tech-proc-1":{"en":"① Drill: bore to design diameter & depth","zh":"① 钻孔：按设计直径与深度成孔","ru":"① Бурение: отверстие по проектному диаметру и глубине","tr":"① Delme: tasarı çapı ve derinliğine göre delin"},
+  "tech-proc-2":{"en":"② Clean: blow / flush dust out of the hole","zh":"② 清孔：高压风/水清除孔内粉尘","ru":"② Очистка: продуйте или промойте пыль из шпура","tr":"② Temizleme: deliğin tozunu üfleyin / yıkayın"},
+  "tech-proc-3":{"en":"③ Load: push the resin capsule to hole bottom","zh":"③ 装填：将树脂胶囊推至孔底","ru":"③ Загрузка: протолкните смоляную капсулу на дно шпура","tr":"③ Yükleme: reçine kapsülünü deliğin dibine itin"},
+  "tech-proc-4":{"en":"④ Mix: rotate rod to break & stir the capsule","zh":"④ 搅拌：锚杆连接钻机旋转破碎并搅拌胶囊","ru":"④ Перемешивание: вращайте стержень, чтобы разбить и перемешать капсулу","tr":"④ Karıştırma: kapsülü kırmak ve karıştırmak için çubuğu döndürün"},
+  "tech-proc-5":{"en":"⑤ Cure: rest until cure age, then load","zh":"⑤ 养护：静置至龄期后承载","ru":"⑤ Отверждение: выдержите до набора прочности, затем нагружайте","tr":"⑤ Kür: kür yaşma ulaşana kadar bekleyin, ardından yükleyin"},
+  "cta-together-title":{"en":"Let's work together","zh":"携手合作共赢","ru":"Давайте работать вместе","tr":"Birlikte çalışalım"},
+  "cta-together-desc":{"en":"Contact us for product recommendations and free samples.","zh":"联系我们获取产品建议与免费样品。","ru":"Свяжитесь с нами за рекомендациями по продукции и бесплатными образцами.","tr":"Ürün önerileri ve ücretsiz numuneler için bizimle iletişime geçin."},
+  "cta-find-title":{"en":"Can't find what you need?","zh":"找不到需要的产品？","ru":"Не нашли то, что нужно?","tr":"İhtiyacınız olanı bulamadınız mı?"},
+  "cta-find-desc":{"en":"Custom formulations and OEM service available. Talk to us.","zh":"支持定制配方与 OEM 代工，欢迎咨询。","ru":"Доступны индивидуальные формулы и OEM-сервис. Свяжитесь с нами.","tr":"Özel formülasyon ve OEM hizmeti mevcuttur. Bize ulaşın."},
+  "prod-resin-capsule-desc":{"en":"Polyester resin capsules for mine bolting, tunnel support & slope stabilization.","zh":"用于煤矿支护、隧道加固与边坡稳定的聚酯树脂胶囊。","ru":"Полиэфирные смоляные капсулы для крепления шахт, поддержки тоннелей и стабилизации откосов.","tr":"Maden boltlama, tünel desteği ve şev stabilizasyonu için polyester reçine kapsülleri."},
+  "prod-epoxy-desc":{"en":"Two-component epoxy for structural anchoring. Cures underwater.","zh":"用于结构锚固的双组分环氧，可水下固化。","ru":"Двухкомпонентный эпоксид для конструкционного анкерования. Отверждается под водой.","tr":"Yapısal ankraj için iki bileşenli epoksi. Suyun altında kür olur."},
+  "prod-mg-resin-desc":{"en":"Unsaturated polyester resin for capsule manufacturing & grouting.","zh":"用于胶囊制造与注浆的不饱和聚酯树脂。","ru":"Ненасыщенная полиэфирная смола для производства капсул и инъектирования.","tr":"Kapsül üretimi ve enjeksiyon için doymamış polyester reçine."},
+  "prod-frp-rod-desc":{"en":"Complete system: rods, plates, nuts & inner bags. Fire-resistant & anti-static.","zh":"完整系统：杆体、托盘、螺母及内袋，阻燃抗静电。","ru":"Полная система: стержни, шайбы, гайки и внутренние пакеты. Огнестойкие и антистатические.","tr":"Tam sistem: çubuklar, plakalar, somunlar ve iç torbalar. Alev geciktirici ve antistatik."},
+  "prod-apps-title":{"en":"Applications","zh":"应用场景","ru":"Области применения","tr":"Uygulama Alanları"},
+  "prod-features-title":{"en":"Key Features","zh":"核心优势","ru":"Ключевые преимущества","tr":"Temel Özellikler"},
+  "prod-resin-capsule-apps":{"en":"Mine roadway bolting, tunnel support, slope stabilization, foundation anchoring, rock reinforcement in civil and mining engineering projects.","zh":"煤矿巷道支护、隧道加固、边坡稳定、基础锚固，以及土木与矿山工程中的岩石加固。","ru":"Крепление угольных штреков, поддержка тоннелей, стабилизация откосов, анкерование фундаментов, усиление породы в гражданском и горном строительстве.","tr":"Maden galerisi boltlama, tünel desteği, şev stabilizasyonu, temel ankrajı ve sivil/maden mühendisliği projelerinde kaya takviyesi."},
+  "prod-epoxy-apps":{"en":"Structural steel bonding, cracked concrete repair, rebar anchoring, heavy-duty fixings in construction and infrastructure.","zh":"钢结构粘结、混凝土裂缝修补、钢筋锚固，以及建筑与基础设施中的重型固定。","ru":"Соединение стальных конструкций, ремонт трещиноватого бетона, анкерование арматуры, тяжёлые крепления в строительстве и инфраструктуре.","tr":"Yapısal çelik yapıştırma, çatlamış beton onarımı, donatı ankrajı ve inşaat/altyapıda ağır yük sabitleme."},
+  "prod-mg-resin-apps":{"en":"Base resin for capsule manufacturing, grouting, and chemical anchoring in mining and construction.","zh":"用于胶囊制造、注浆及矿山与建筑化学锚固的基体树脂。","ru":"Базовая смола для производства капсул, инъектирования и химического анкерования в горном деле и строительстве.","tr":"Kapsül üretimi, enjeksiyon ve madencilik/inşaatta kimyasal ankraj için baz reçine."},
+  "prod-frp-rod-apps":{"en":"Mine roof bolting, tunnel and slope support, corrosive or electrically-sensitive environments requiring non-metallic rods.","zh":"煤矿顶板支护、隧道与边坡加固，以及需要非金属杆体的腐蚀或电气敏感环境。","ru":"Крепление кровли шахт, поддержка тоннелей и откосов, коррозионные или электрочувствительные среды, требующие неметаллических стержней.","tr":"Maden tavan boltlama, tünel ve şev desteği ile kimyasal/nemli ve elektrik hassas ortamlar için metal olmayan çubuklar."},
 };
 
 var currentLang = localStorage.getItem("jinjiu_lang") || "en";
 
+var LANG_TITLES = {
+  "en":"Jinjiu Anchor Resin | Professional Resin Anchor Capsule Manufacturer",
+  "zh":"金久锚固剂 | 专业树脂锚固剂生产厂家",
+  "ru":"Jinjiu Anchor Resin | Профессиональный производитель смоляных анкерных капсул",
+  "tr":"Jinjiu Anchor Resin | Profesyonel Reçine Ankraj Kapsülü Üreticisi"
+};
+var LANG_DESCS = {
+  "en":"Professional anchoring agent manufacturer since 2004. ISO 9001/MA/SGS certified factory. Exporting to 30+ countries. Resin capsules, epoxy adhesive, MG resin, FRP anchor rods.",
+  "zh":"成立于2004年的专业锚固剂生产厂家。ISO 9001/MA/SGS认证工厂，出口30多个国家。树脂锚固剂、环氧胶、MG树脂、FRP锚杆。",
+  "ru":"Профессиональный производитель анкерующих смол с 2004 года. Сертифицированный завод ISO 9001/MA/SGS. Экспорт в 30+ стран. Смоляные капсулы, эпоксид, MG-смола, FRP-стержни.",
+  "tr":"2004'ten beri profesyonel ankraj maddesi üreticisi. ISO 9001/MA/SGS sertifikalı fabrika. 30+ ülkeye ihracat. Reçine kapsülleri, epoksi yapıştırıcı, MG reçinesi, FRP ankraj çubukları."
+};
+
 function applyLang(lang) {
   currentLang = lang;
   localStorage.setItem("jinjiu_lang", lang);
-  var btn = document.getElementById("lang-toggle");
-  if(btn) btn.textContent = lang === "en" ? "🌐 中文" : "🌐 English";
+  var sel = document.getElementById("lang-select");
+  if(sel) sel.value = lang;
   var els = document.querySelectorAll("[data-i18n]");
   for(var i=0;i<els.length;i++){
     var el=els[i];
     var key=el.getAttribute("data-i18n");
-    if(LANG_DATA[key]&&LANG_DATA[key][lang]){
-      if(LANG_DATA[key][lang].indexOf("<")>=0||LANG_DATA[key][lang].indexOf("**")>=0){
-        el.innerHTML=LANG_DATA[key][lang].replace(/\*\*/g,"<strong>").replace(/\*\*/g,"</strong>");
+    if(LANG_DATA[key] && LANG_DATA[key][lang]){
+      var t = LANG_DATA[key][lang];
+      if(t.indexOf("<")>=0 || t.indexOf("**")>=0){
+        el.innerHTML = t.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
       } else {
-        el.textContent=LANG_DATA[key][lang];
+        el.textContent = t;
       }
     }
   }
-  document.title = lang === "zh" ? "金久锚固剂 | 专业树脂锚固剂生产厂家" : "Jinjiu Anchor Resin | Professional Resin Anchor Capsule Manufacturer";
-}
-
-function switchLang() {
-  applyLang(currentLang === "en" ? "zh" : "en");
+  document.documentElement.lang = lang;
+  document.title = LANG_TITLES[lang] || LANG_TITLES.en;
+  var meta = document.querySelector('meta[name="description"]');
+  if(meta) meta.setAttribute("content", LANG_DESCS[lang] || LANG_DESCS.en);
 }
 
 
